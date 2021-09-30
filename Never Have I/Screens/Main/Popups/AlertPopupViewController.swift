@@ -1,6 +1,6 @@
 import UIKit
 
-class PopupViewController: BaseViewController {
+class AlertPopupViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     

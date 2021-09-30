@@ -26,14 +26,21 @@
 		286D335B2704B30B00E6761E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33562704B30B00E6761E /* Storyboards.swift */; };
 		286D335C2704B30B00E6761E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33572704B30B00E6761E /* Main.swift */; };
 		286D335E2704B34A00E6761E /* Popups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D335D2704B34A00E6761E /* Popups.swift */; };
-		286D33602704B3C600E6761E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D335F2704B3C600E6761E /* HomeViewController.swift */; };
+		286D33602704B3C600E6761E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D335F2704B3C600E6761E /* CategoryViewController.swift */; };
 		286D33632704B3D700E6761E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33622704B3D700E6761E /* BaseViewController.swift */; };
-		286D33652704B55700E6761E /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33642704B55700E6761E /* PopupViewController.swift */; };
+		286D33652704B55700E6761E /* LanguagePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33642704B55700E6761E /* LanguagePopupViewController.swift */; };
 		4A3ECF1C2704A3D100487902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3ECF1B2704A3D100487902 /* AppDelegate.swift */; };
 		4A3ECF1E2704A3D100487902 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3ECF1D2704A3D100487902 /* SceneDelegate.swift */; };
 		4A3ECF232704A3D100487902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3ECF212704A3D100487902 /* Main.storyboard */; };
 		4A3ECF252704A3D400487902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3ECF242704A3D400487902 /* Assets.xcassets */; };
 		4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3ECF262704A3D400487902 /* LaunchScreen.storyboard */; };
+		4A74ED5A270515AE00131643 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED59270515AE00131643 /* NavigationController.swift */; };
+		4A74ED5D270598CD00131643 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */; };
+		4A74ED5E270598CD00131643 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */; };
+		4A74ED6227059D8700131643 /* NHEButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6127059D8700131643 /* NHEButtonView.swift */; };
+		4A74ED6427059F7000131643 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6327059F7000131643 /* SettingsViewController.swift */; };
+		4A74ED6627059FBE00131643 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6527059FBE00131643 /* TaskViewController.swift */; };
+		4A74ED682705A07200131643 /* AlertPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED672705A07200131643 /* AlertPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +63,9 @@
 		286D33562704B30B00E6761E /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		286D33572704B30B00E6761E /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		286D335D2704B34A00E6761E /* Popups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popups.swift; sourceTree = "<group>"; };
-		286D335F2704B3C600E6761E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		286D335F2704B3C600E6761E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		286D33622704B3D700E6761E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		286D33642704B55700E6761E /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		286D33642704B55700E6761E /* LanguagePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopupViewController.swift; sourceTree = "<group>"; };
 		4A3ECF182704A3D100487902 /* Never Have I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Never Have I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3ECF1B2704A3D100487902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3ECF1D2704A3D100487902 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +73,13 @@
 		4A3ECF242704A3D400487902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3ECF272704A3D400487902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3ECF292704A3D400487902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A74ED59270515AE00131643 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-Medium.ttf"; path = "Fonts/Oswald-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-SemiBold.ttf"; path = "Fonts/Oswald-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		4A74ED6127059D8700131643 /* NHEButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHEButtonView.swift; sourceTree = "<group>"; };
+		4A74ED6327059F7000131643 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4A74ED6527059FBE00131643 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		4A74ED672705A07200131643 /* AlertPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 		286D332A2704B0CA00E6761E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A74ED6127059D8700131643 /* NHEButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +143,8 @@
 		286D332D2704B0D900E6761E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */,
+				4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -170,7 +187,10 @@
 		286D33322704B11200E6761E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				286D335F2704B3C600E6761E /* HomeViewController.swift */,
+				286D335F2704B3C600E6761E /* CategoryViewController.swift */,
+				4A74ED59270515AE00131643 /* NavigationController.swift */,
+				4A74ED6327059F7000131643 /* SettingsViewController.swift */,
+				4A74ED6527059FBE00131643 /* TaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,7 +226,8 @@
 		286D33612704B3C900E6761E /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				286D33642704B55700E6761E /* PopupViewController.swift */,
+				4A74ED672705A07200131643 /* AlertPopupViewController.swift */,
+				286D33642704B55700E6761E /* LanguagePopupViewController.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -310,8 +331,10 @@
 				4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */,
 				286D334B2704B23700E6761E /* swiftgen.yml in Resources */,
 				286D334C2704B25C00E6761E /* Localizable.strings in Resources */,
+				4A74ED5D270598CD00131643 /* Oswald-Medium.ttf in Resources */,
 				4A3ECF252704A3D400487902 /* Assets.xcassets in Resources */,
 				4A3ECF232704A3D100487902 /* Main.storyboard in Resources */,
+				4A74ED5E270598CD00131643 /* Oswald-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,19 +353,24 @@
 				286D33632704B3D700E6761E /* BaseViewController.swift in Sources */,
 				286D33402704B18C00E6761E /* UILabel.swift in Sources */,
 				4A3ECF1C2704A3D100487902 /* AppDelegate.swift in Sources */,
+				4A74ED6627059FBE00131643 /* TaskViewController.swift in Sources */,
 				286D333C2704B18C00E6761E /* UIColor.swift in Sources */,
 				286D335B2704B30B00E6761E /* Storyboards.swift in Sources */,
+				4A74ED682705A07200131643 /* AlertPopupViewController.swift in Sources */,
+				4A74ED6227059D8700131643 /* NHEButtonView.swift in Sources */,
 				286D33592704B30B00E6761E /* Util.swift in Sources */,
 				286D33422704B18C00E6761E /* UIImage.swift in Sources */,
 				286D335A2704B30B00E6761E /* Cells.swift in Sources */,
 				286D33432704B18C00E6761E /* UITableView.swift in Sources */,
 				286D33512704B2EA00E6761E /* State.swift in Sources */,
+				4A74ED5A270515AE00131643 /* NavigationController.swift in Sources */,
 				286D333E2704B18C00E6761E /* UIFont.swift in Sources */,
-				286D33602704B3C600E6761E /* HomeViewController.swift in Sources */,
+				286D33602704B3C600E6761E /* CategoryViewController.swift in Sources */,
 				286D33582704B30B00E6761E /* Constants.swift in Sources */,
 				4A3ECF1E2704A3D100487902 /* SceneDelegate.swift in Sources */,
 				286D335E2704B34A00E6761E /* Popups.swift in Sources */,
-				286D33652704B55700E6761E /* PopupViewController.swift in Sources */,
+				4A74ED6427059F7000131643 /* SettingsViewController.swift in Sources */,
+				286D33652704B55700E6761E /* LanguagePopupViewController.swift in Sources */,
 				286D33462704B1B900E6761E /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,10 @@ import UIKit
 
 public enum Main: String, StoryboardScreen {
     
-    case home = "HomeViewController"
+    case navigation = "NavigationController"
+    case category   = "CategoryViewController"
+    case settings   = "SettingsViewController"
+    case task       = "TaskViewController"
     
 }
 

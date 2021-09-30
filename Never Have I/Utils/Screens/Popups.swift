@@ -2,7 +2,8 @@ import UIKit
 
 public enum Popup: String, StoryboardScreen {
     
-    case main = "main"
+    case alert      = "AlertPopupViewController"
+    case language   = "LanguagePopupViewController"
     
 }
 
