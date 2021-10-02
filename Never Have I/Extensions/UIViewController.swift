@@ -6,6 +6,13 @@ extension UIViewController {
         return screen.storyboard.instantiateViewController(withIdentifier: screen.id) as! Self
     }
     
+    func showPopup(_ popup: UIViewController) {
+        self.addChild(popup)
+        popup.view.frame = self.view.frame
+        self.view.addSubview(popup.view)
+        popup.didMove(toParent: self)
+    }
+    
 }
 
 /*

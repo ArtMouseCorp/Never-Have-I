@@ -28,6 +28,7 @@ class SettingsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +53,8 @@ class SettingsViewController: BaseViewController {
     
     @objc func languageViewTapped() {
         // TODO: - Present Language popup
-        
+        let languageViewController = LanguagePopupViewController.load(from: Popup.language)
+        showPopup(languageViewController)
     }
     
     @objc func termsOfUseViewTapped() {

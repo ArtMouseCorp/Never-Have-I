@@ -38,7 +38,7 @@
     <resources>
         <image name="NHIE - Logo" width="284" height="119"/>
         <namedColor name="#DD5133">
-            <color red="0.8666666666666667" green="0.31764705882352939" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.24313725490196078" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

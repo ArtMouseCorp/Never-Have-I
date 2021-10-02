@@ -6,6 +6,7 @@ public enum Main: String, StoryboardScreen {
     case category   = "CategoryViewController"
     case settings   = "SettingsViewController"
     case task       = "TaskViewController"
+    case card       = "CardViewController"
     
 }
 
