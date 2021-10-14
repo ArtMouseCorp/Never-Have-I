@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.rootViewController = NavigationController.load(from: Main.navigation)
         window.makeKeyAndVisible()
-        window.overrideUserInterfaceStyle = .unspecified
+        window.overrideUserInterfaceStyle = .dark
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

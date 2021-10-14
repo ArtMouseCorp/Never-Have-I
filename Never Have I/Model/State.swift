@@ -11,8 +11,17 @@ class State {
     // State properties
     
     private var appLaunch: Int = 0
-    
+        
     // MARK: - Functions
+    
+    public func getLanguage() -> Language.Code {
+        let code = userDefaults.string(forKey: UDKeys.language) ?? "eng"
+        return Language.Code.init(code)
+    }
+    
+    public func setLanguage(to languageCode: Language.Code) {
+        userDefaults.set(languageCode.rawValue, forKey: UDKeys.language)
+    }
     
     public func newAppLaunch() {
         self.appLaunch = self.getAppLaunchCount() + 1

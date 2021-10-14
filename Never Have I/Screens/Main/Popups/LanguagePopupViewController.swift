@@ -22,22 +22,31 @@ class LanguagePopupViewController: BaseViewController {
     
     // MARK: - Variables
     
-    let languageNames = ["ENGLISH", "РУССКИЙ", "FRANÇAIS", "DEUTSCH"]
     var selectedItem = 0
+    var onSelection: (()->()) = {}
+    var lastSelectedLanguage: Language.Code = .en
     
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animateIn()
+        localize()
+        lastSelectedLanguage = State.shared.getLanguage()
+        super.hapticFeedback()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         configureUI()
-        setupGestures()
     }
     
     // MARK: - Custom functions
+    
+    private func localize() {
+        languageLabel.localize(with: "settings.language", defaultValue: "LANGUAGE")
+        selectButton.setTitleWithoutAnimation(title: getLocalizedString(for: "language.select", defaultValue: "SELECT"))
+        cancelButton.setTitleWithoutAnimation(title: getLocalizedString(for: "language.cancel", defaultValue: "CANCEL"))
+    }
     
     private func configureUI() {
         configure(tableView)
@@ -71,41 +80,39 @@ class LanguagePopupViewController: BaseViewController {
         }
     }
     
-    private func setupGestures() {
-        
-    }
-    
-    // MARK: - Gesture actions
-    
     // MARK: - @IBActions
+    
     @IBAction func selectButtonPressed(_ sender: Any) {
+        onSelection()
         animateOut()
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        State.shared.setLanguage(to: lastSelectedLanguage)
         animateOut()
     }
     
 }
 
 extension LanguagePopupViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return languageNames.count
+        return Language.languages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.languageCell.id, for: indexPath) as! LanguageTableViewCell
         
-        cell.titleLabel.text = languageNames[indexPath.row]
-        
-        selectedItem == indexPath.row ? cell.setChecked() : cell.setUnchecked()
+        cell.titleLabel.text = Language.languages[indexPath.row].name
+        let index = Language.languages.firstIndex{ $0.code == State.shared.getLanguage() }
+        index == indexPath.row ? cell.setChecked() : cell.setUnchecked()
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectedItem = indexPath.row
+        State.shared.setLanguage(to: Language.languages[indexPath.row].code)
+        localize()
         tableView.reloadData()
     }
 }

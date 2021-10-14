@@ -9,14 +9,14 @@ class CardViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
 
     // MARK: - Variables
-    var titleLabelText = ""
+    
     var descriptionLabelText = ""
     
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = titleLabelText
+        titleLabel.localize(with: "cards.nhie", defaultValue: "NEVER HAVE I EVER")
         descriptionLabel.text = descriptionLabelText
     }
     

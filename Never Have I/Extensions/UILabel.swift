@@ -20,8 +20,8 @@ extension UILabel {
         return self.frame.height
     }
     
-    public func localize(with localizedString: String) {
-        self.text = localizedString
+    public func localize(with key: String, defaultValue: String) {
+        self.text = getLocalizedString(for: key, defaultValue: defaultValue)
     }
     
 }

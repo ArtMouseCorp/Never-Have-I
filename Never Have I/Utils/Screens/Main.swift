@@ -2,11 +2,14 @@ import UIKit
 
 public enum Main: String, StoryboardScreen {
     
-    case navigation = "NavigationController"
-    case category   = "CategoryViewController"
-    case settings   = "SettingsViewController"
-    case task       = "TaskViewController"
-    case card       = "CardViewController"
+    case navigation     = "NavigationController"
+    case category       = "CategoryViewController"
+    case settings       = "SettingsViewController"
+    case task           = "TaskViewController"
+    case card           = "CardViewController"
+    case gameover       = "GameOverViewController"
+    case subscription   = "SubscriptionViewController"
+    case info           = "InfoViewController"
     
 }
 

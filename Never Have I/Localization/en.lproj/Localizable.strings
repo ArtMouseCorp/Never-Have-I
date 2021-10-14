@@ -1,1 +1,47 @@
 
+// MARK: - Common
+
+
+// MARK: - Main Screen
+
+"main.play"                 = "PLAY";
+
+// MARK: - Settings Screen
+
+"settings.language"         = "LANGUAGE";
+"settings.termsOfUse"       = "TERMS OF USE";
+"settings.privacyPolicy"    = "PRIVACY POLICY";
+"settings.restorePurchases" = "RESTORE PURCHASES";
+
+// MARK: - Cards Screen
+
+"cards.next"                = "NEXT";
+"cards.nhie"                = "NEVER HAVE I EVER";
+
+// MARK: - Game Over
+
+"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
+"gameover.playAgain"        = "PLAY AGAIN";
+"gameover.rateUs"           = "RATE US";
+
+// MARK: - Language Popup
+
+"language.select"           = "SELECT";
+"language.cancel"           = "CANCEL";
+
+// MARK: - Alerts
+
+"alertTitle.noInternet" = "NO INTERNET CONNECTION";
+"alertBody.noInternet" = "There is no internet connection. Please connect to the network and try again";
+
+"alertTitle.subscribed" = "SUBSCRIBED";
+"alertBody.subscribed" = "You are already subscribed. All functionality is available to you";
+
+"alertTitle.restored" = "RESTORED";
+"alertBody.restored" = "You have successfully restored your subscription. All functionality is now available to you";
+
+"alertTitle.notSubscriber" = "CANNOT BE RESTORED";
+"alertBody.notSubscriber" = "Sorry, you cannot restore your purchase because you do not have an active subscription";
+
+"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
+"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";

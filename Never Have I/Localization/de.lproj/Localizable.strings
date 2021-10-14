@@ -1,0 +1,47 @@
+
+// MARK: - Common
+
+
+// MARK: - Main Screen
+
+"main.play"                 = "SPIEL STARTEN";
+
+// MARK: - Settings Screen
+
+"settings.language"         = "SPRACHE";
+"settings.termsOfUse"       = "NUTZUNGSBEDINGUNGEN";
+"settings.privacyPolicy"    = "DATENSCHUTZ";
+"settings.restorePurchases" = "KÄUFE WIEDERHERSTELLEN";
+
+// MARK: - Cards Screen
+
+"cards.next"                = "WEITER";
+"cards.nhie"                = "ICH HABE NIE";
+
+// MARK: - Game Over
+
+"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
+"gameover.playAgain"        = "PLAY AGAIN";
+"gameover.rateUs"           = "RATE US";
+
+// MARK: - Language Popup
+
+"language.select"           = "WÄHLEN";
+"language.cancel"           = "ABBRECHEN";
+
+// MARK: - Alerts
+
+"alertTitle.noInternet" = "KEINE INTERNETVERBINDUNG";
+"alertBody.noInternet" = "Es besteht keine Internetverbindung. Bitte stellen Sie eine Verbindung zum Netzwerk her und versuchen Sie es erneut";
+
+"alertTitle.subscribed" = "ABONNIERT";
+"alertBody.subscribed" = "Sie sind bereits angemeldet. Alle Funktionen stehen Ihnen zur Verfügung";
+
+"alertTitle.restored" = "WIEDERHERGESTELLT";
+"alertBody.restored" = "Sie haben Ihr Abonnement erfolgreich wiederhergestellt. Alle Funktionen sind jetzt für Sie verfügbar";
+
+"alertTitle.notSubscriber" = "KANN NICHT WIEDERHERGESTELLT WERDEN";
+"alertBody.notSubscriber" = "Sie können Ihren Einkauf leider nicht wiederherstellen, da Sie kein aktives Abonnement haben";
+
+"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
+"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";

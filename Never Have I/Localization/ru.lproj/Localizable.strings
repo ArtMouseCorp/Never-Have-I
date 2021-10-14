@@ -1,0 +1,47 @@
+
+// MARK: - Common
+
+
+// MARK: - Main Screen
+
+"main.play"                 = "ИГРАТЬ";
+
+// MARK: - Settings Screen
+
+"settings.language"         = "ЯЗЫК";
+"settings.termsOfUse"       = "УСЛОВИЯ ПОЛЬЗОВАНИЯ";
+"settings.privacyPolicy"    = "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ";
+"settings.restorePurchases" = "ВОССТАНОВИТЬ ПОКУПКИ";
+
+// MARK: - Cards Screen
+
+"cards.next"                = "СЛЕДУЮЩАЯ";
+"cards.nhie"                = "Я НИКОГДА НЕ";
+
+// MARK: - Game Over
+
+"gameover.playMoreCards"    = "ПОПРОБУЙТЕ ДРУГИЕ КАТЕГОРИИ";
+"gameover.playAgain"        = "ИГРАТЬ СНОВА";
+"gameover.rateUs"           = "ОЦЕНИТЬ НАС";
+
+// MARK: - Language Popup
+
+"language.select"           = "ВЫБРАТЬ";
+"language.cancel"           = "ОТМЕНА";
+
+// MARK: - Alerts
+
+"alertTitle.noInternet" = "ОТСУТСТВУЕТ ИНТЕРНЕТ СОЕДИНЕНИЕ";
+"alertBody.noInternet" = "Отсутствует интернет соединение. Пожалуйста подключитесь к сети и попробуйте снова";
+
+"alertTitle.subscribed" = "ВЫ ПОДПИСАНЫ";
+"alertBody.subscribed" = "Вы уже подписаны. Вам доступен весь функционал";
+
+"alertTitle.restored" = "ВОССТАНОВЛЕНО";
+"alertBody.restored" = "Вы успешно восстановили свою подписку. Все функции теперь доступны для вас";
+
+"alertTitle.notSubscriber" = "НЕЛЬЗЯ ВОССТАНОВИТЬ";
+"alertBody.notSubscriber" = "Извините, вы не можете восстановись вашу покупку, так как у вас нету активной подписки";
+
+"alertTitle.noCategoriesChoosen" = "КАТЕГОРИИ НЕ ВЫБРАНЫ";
+"alertBody.noCategoriesChoosen" = "Пожалуйста, выберите хотя бы одну категорию чтобы начать игру";

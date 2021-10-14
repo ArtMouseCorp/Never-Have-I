@@ -22,24 +22,25 @@ class SettingsViewController: BaseViewController {
     // Image Views
     @IBOutlet weak var languageImageView: UIImageView!
     
-    // MARK: - Variables
-    
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        localize()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        configureUI()
         setupGestures()
     }
     
     // MARK: - Custom functions
     
-    private func configureUI() {
-        
+    private func localize() {
+        languageLabel.localize(with: "settings.language", defaultValue: "LANGUAGE")
+        termsOfUseLabel.localize(with: "settings.termsOfUse", defaultValue: "TERMS OF USE")
+        privacyPolicyLabel.localize(with: "settings.privacyPolicy", defaultValue: "PRIVACY POLICY")
+        restorePurchasesLabel.localize(with: "settings.restorePurchases", defaultValue: "RESOTRE PURCHASES")
+        languageImageView.image = Language.languages.first { $0.code == State.shared.getLanguage() }?.image
     }
     
     private func setupGestures() {
@@ -54,19 +55,29 @@ class SettingsViewController: BaseViewController {
     @objc func languageViewTapped() {
         // TODO: - Present Language popup
         let languageViewController = LanguagePopupViewController.load(from: Popup.language)
+        languageViewController.onSelection = {
+            self.localize()
+        }
         showPopup(languageViewController)
     }
     
     @objc func termsOfUseViewTapped() {
         // TODO: - Present terms of use popup
+        let infoViewController = InfoViewController.load(from: Main.info)
+        infoViewController.titleLabelText = getLocalizedString(for: "settings.termsOfUse", defaultValue: "TERMS OF USE")
+        self.present(infoViewController, animated: true, completion: nil)
     }
     
     @objc func privacyPolicyViewTapped() {
         // TODO: - present privacy policy popup
+        let infoViewController = InfoViewController.load(from: Main.info)
+        infoViewController.titleLabelText = getLocalizedString(for: "settings.privacyPolicy", defaultValue: "PRIVACY POLICY")
+        self.present(infoViewController, animated: true, completion: nil)
     }
     
     @objc func restorePurchasesTapped() {
         // TODO: - resotre purchases
+
     }
     
     // MARK: - @IBActions

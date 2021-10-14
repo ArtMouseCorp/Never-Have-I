@@ -21,7 +21,6 @@ class CategoryViewController: BaseViewController {
     
     // MARK: - Variables
     
-    let categoriesData = ["POPULAR", "DIRTY & SEX", "PARTY", "RELATIONSHIP", "SCHOOL & WORK"]
     var selectedCategories: [Int] = []
     
     // MARK: - Awake functions
@@ -31,8 +30,10 @@ class CategoryViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        Category.updateCategories()
         configureUI()
         setupGestures()
+        localize()
         selectedCategories = []
         tableView.reloadData()
     }
@@ -44,6 +45,10 @@ class CategoryViewController: BaseViewController {
         tableViewHeightConstraint.constant = tableView.contentHeight
     }
     
+    private func localize() {
+        playLabel.localize(with: "main.play", defaultValue: "PLAY")
+    }
+    
     private func setupGestures() {
         playView.addTapGesture(target: self, action: #selector(playViewTapped))
     }
@@ -51,8 +56,22 @@ class CategoryViewController: BaseViewController {
     // MARK: - Gesture actions
     
     @objc func playViewTapped() {
-        let taskViewController = TaskViewController.load(from: Main.task)
-        self.navigationController?.pushViewController(taskViewController, animated: true)
+        if selectedCategories.count > 0 {
+            var tasks: [String] = []
+            let taskViewController = TaskViewController.load(from: Main.task)
+            for i in selectedCategories {
+                tasks.append(contentsOf: Category.categories[i].tasks)
+            }
+            tasks.shuffle()
+            taskViewController.tasks = tasks
+            self.navigationController?.pushViewController(taskViewController, animated: true)
+        }
+        else {
+            let alert = AlertPopupViewController.load(from: Popup.alert)
+            alert.titleLabelText = getLocalizedString(for: "alertTitle.noCategoriesChoosen", defaultValue: "NO CATEGORIES CHOOSEN")
+            alert.descriptionLabelText = getLocalizedString(for: "alertBody.noCategoriesChoosen", defaultValue: "Please, choose at least one category to start the game")
+            showPopup(alert)
+        }
     }
     
     // MARK: - @IBActions
@@ -67,13 +86,13 @@ class CategoryViewController: BaseViewController {
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoriesData.count
+        return Category.categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.categoryCell.id, for: indexPath) as! CategoryTableViewCell
         
-        cell.titleLabel.text = categoriesData[indexPath.row]
+        cell.titleLabel.text = Category.categories[indexPath.row].name.uppercased()
         cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         
         return cell

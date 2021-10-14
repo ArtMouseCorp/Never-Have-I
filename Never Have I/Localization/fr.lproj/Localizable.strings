@@ -1,0 +1,47 @@
+
+// MARK: - Common
+
+
+// MARK: - Main Screen
+
+"main.play"                 = "JOUER";
+
+// MARK: - Settings Screen
+
+"settings.language"         = "LANGUE";
+"settings.termsOfUse"       = "CONDITIONS D'UTILISATION";
+"settings.privacyPolicy"    = "POLITIQUE DE CONFIDENTIALITÉ";
+"settings.restorePurchases" = "RESTAURER LES ACHATS";
+
+// MARK: - Cards Screen
+
+"cards.next"                = "SUIVANT";
+"cards.nhie"                = "";
+
+// MARK: - Game Over
+
+"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
+"gameover.playAgain"        = "PLAY AGAIN";
+"gameover.rateUs"           = "RATE US";
+
+// MARK: - Language Popup
+
+"language.select"           = "SÉLECTIONNER";
+"language.cancel"           = "ANNULER";
+
+// MARK: - Alerts
+
+"alertTitle.noInternet" = "PAS DE CONNEXION INTERNET";
+"alertBody.noInternet" = "Il n'y a pas de connexion Internet. Veuillez vous connecter au réseau et réessayer";
+
+"alertTitle.subscribed" = "ABONNÉ";
+"alertBody.subscribed" = "Vous êtes déjà abonné. Toutes les fonctionnalités sont à votre disposition";
+
+"alertTitle.restored" = "RESTAURÉ";
+"alertBody.restored" = "Vous avez réussi à restaurer votre abonnement. Toutes les fonctionnalités sont désormais à votre disposition";
+
+"alertTitle.notSubscriber" = "IMPOSSIBLE À RESTAURER";
+"alertBody.notSubscriber" = "Désolé, vous ne pouvez pas restaurer votre achat car vous n'avez pas d'abonnement actif";
+
+"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
+"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";
