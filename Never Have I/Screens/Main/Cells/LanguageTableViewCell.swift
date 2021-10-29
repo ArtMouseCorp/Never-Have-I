@@ -22,7 +22,7 @@ class LanguageTableViewCell: UITableViewCell {
     // MARK: - Custom functions
     
     private func configureUI() {
-        cellBackgroundView.roundCorners(radius: 12, corners: .allCorners)
+        cellBackgroundView.roundCorners(radius: 12)
         addShadow()
     }
     

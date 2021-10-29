@@ -2,8 +2,8 @@ import UIKit
 
 extension UIButton {
 
-    public func localize(with key: String, defaultValue: String) {
-        self.setTitle(getLocalizedString(for: key, defaultValue: defaultValue), for: .normal)
+    public func localize(with key: String) {
+        self.setTitle(localized(key), for: .normal)
     }
     
     func setTitleWithoutAnimation(title: String?) {

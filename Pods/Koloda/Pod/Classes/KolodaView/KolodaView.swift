@@ -11,7 +11,7 @@ import pop
 
 // Default values
 private let defaultCountOfVisibleCards = 3
-private let defaultBackgroundCardsTopMargin: CGFloat = 8.0
+private let defaultBackgroundCardsTopMargin: CGFloat = 4.0
 private let defaultBackgroundCardsScalePercent: CGFloat = 0.95
 private let defaultBackgroundCardsLeftMargin: CGFloat = 8.0
 private let defaultBackgroundCardFrameAnimationDuration: TimeInterval = 0.2
@@ -20,8 +20,8 @@ private let defaultReverseAnimationDuration: TimeInterval = 0.3
 
 // Opacity values
 private let defaultAlphaValueOpaque: CGFloat = 1.0
-private let defaultAlphaValueTransparent: CGFloat = 1.0
-private let defaultAlphaValueSemiTransparent: CGFloat = 1.0
+private let defaultAlphaValueTransparent: CGFloat = 0.0
+private let defaultAlphaValueSemiTransparent: CGFloat = 0.7
 
 // Direction of visible cards
 public enum VisibleCardsDirection: Int {

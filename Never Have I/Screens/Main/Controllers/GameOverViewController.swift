@@ -13,30 +13,23 @@ class GameOverViewController: BaseViewController {
     @IBOutlet weak var rateUsButton: UIButton!
     
     // MARK: - Variables
-    
-    var onPlayAgainButtonPressed: (()->()) = {}
         
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        localize()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        configureUI()
     }
     
     // MARK: - Custom functions
     
-    private func localize() {
-        playMoreLabel.localize(with: "gameover.playMoreCards", defaultValue: "PLAY MORE CARDS IN OTHER CATEGORIES")
-        playAgainButton.localize(with: "gameover.playAgain", defaultValue: "PLAY AGAIN")
-        rateUsButton.localize(with: "gameover.rateUs", defaultValue: "RATE US")
+    override func localize() {
+        playMoreLabel.localize(with: "gameover.playMoreCards")
+        playAgainButton.localize(with: "button.gameover.playAgain")
+        rateUsButton.localize(with: "button.gameover.rateUs")
     }
     
-    private func configureUI() {
-        playAgainButton.roundCorners(radius: 12, corners: .allCorners)
+    override func configureUI() {
+        playAgainButton.roundCorners(radius: 12)
         addButtonShadow()
     }
     
@@ -50,7 +43,6 @@ class GameOverViewController: BaseViewController {
     // MARK: - @IBActions
     
     @IBAction func playAgainButtonPressed(_ sender: Any) {
-        onPlayAgainButtonPressed()
         self.dismiss(animated: true, completion: nil)
     }
     

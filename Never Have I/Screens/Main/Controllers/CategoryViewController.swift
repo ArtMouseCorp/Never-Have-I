@@ -1,7 +1,7 @@
 import UIKit
 
 class CategoryViewController: BaseViewController {
-
+    
     // MARK: - @IBOutlets
     
     // Views
@@ -21,57 +21,56 @@ class CategoryViewController: BaseViewController {
     
     // MARK: - Variables
     
-    var selectedCategories: [Int] = []
+    var isViewDidLayoutSubviews: Bool = false
     
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.configure(tableView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        guard !isViewDidLayoutSubviews else { return }
+        self.tableViewHeightConstraint.constant = self.tableView.contentHeight
+        self.tableViewHeightConstraint.constant = self.tableView.contentHeight
+        isViewDidLayoutSubviews = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        Category.updateCategories()
-        configureUI()
-        setupGestures()
-        localize()
-        selectedCategories = []
+        super.viewWillAppear(animated)
+        State.shared.selectedCategories.removeAll()
         tableView.reloadData()
     }
     
     // MARK: - Custom functions
     
-    private func configureUI() {
-        configure(tableView)
-        tableViewHeightConstraint.constant = tableView.contentHeight
+    override func localize() {
+        playLabel.localize(with: "button.main.play")
     }
     
-    private func localize() {
-        playLabel.localize(with: "main.play", defaultValue: "PLAY")
-    }
-    
-    private func setupGestures() {
+    override func setupGestures() {
         playView.addTapGesture(target: self, action: #selector(playViewTapped))
     }
     
     // MARK: - Gesture actions
     
     @objc func playViewTapped() {
-        if selectedCategories.count > 0 {
-            var tasks: [String] = []
-            let taskViewController = TaskViewController.load(from: Main.task)
-            for i in selectedCategories {
-                tasks.append(contentsOf: Category.categories[i].tasks)
-            }
-            tasks.shuffle()
-            taskViewController.tasks = tasks
-            self.navigationController?.pushViewController(taskViewController, animated: true)
-        }
-        else {
+        
+        guard !State.shared.selectedCategories.isEmpty else {
+            
+            // TODO: - Haptic feedback
+            
             let alert = AlertPopupViewController.load(from: Popup.alert)
-            alert.titleLabelText = getLocalizedString(for: "alertTitle.noCategoriesChoosen", defaultValue: "NO CATEGORIES CHOOSEN")
-            alert.descriptionLabelText = getLocalizedString(for: "alertBody.noCategoriesChoosen", defaultValue: "Please, choose at least one category to start the game")
-            showPopup(alert)
+            alert.initialize(title: localized("alert.noCategoriesChoosen.title"), message: localized("alert.noCategoriesChoosen.message"))
+            self.showPopup(alert)
+            
+            return
         }
+        
+        let taskVC = TaskViewController.load(from: Main.task)
+        self.navigationController?.pushViewController(taskVC, animated: true)
+        
     }
     
     // MARK: - @IBActions
@@ -86,13 +85,13 @@ class CategoryViewController: BaseViewController {
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Category.categories.count
+        return Category.all.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.categoryCell.id, for: indexPath) as! CategoryTableViewCell
         
-        cell.titleLabel.text = Category.categories[indexPath.row].name.uppercased()
+        cell.titleLabel.text = Category.all[indexPath.row].name.uppercased()
         cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         
         return cell
@@ -100,12 +99,13 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CategoryTableViewCell
+        let category = Category.all[indexPath.row]
         
-        if let index = selectedCategories.firstIndex(of: indexPath.row) {
-            selectedCategories.remove(at: index)
+        if let index = State.shared.selectedCategories.firstIndex(of: category) {
+            State.shared.selectedCategories.remove(at: index)
             cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         } else {
-            selectedCategories.append(indexPath.row)
+            State.shared.selectedCategories.append(category)
             cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         }
         

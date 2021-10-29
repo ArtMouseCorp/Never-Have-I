@@ -702,7 +702,10 @@ static POPStaticAnimatablePropertyState _staticStates[] =
 
   {kPOPScrollViewScrollIndicatorInsets,
     ^(UIScrollView *obj, CGFloat values[]) {
-      
+      values[0] = obj.scrollIndicatorInsets.top;
+      values[1] = obj.scrollIndicatorInsets.left;
+      values[2] = obj.scrollIndicatorInsets.bottom;
+      values[3] = obj.scrollIndicatorInsets.right;
     },
     ^(UIScrollView *obj, const CGFloat values[]) {
       obj.scrollIndicatorInsets = values_to_edge_insets(values);

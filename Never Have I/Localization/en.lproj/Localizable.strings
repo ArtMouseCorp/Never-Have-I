@@ -1,47 +1,62 @@
 
-// MARK: - Common
-
-
 // MARK: - Main Screen
 
-"main.play"                 = "PLAY";
+"button.main.play"                      = "PLAY";
 
 // MARK: - Settings Screen
 
-"settings.language"         = "LANGUAGE";
-"settings.termsOfUse"       = "TERMS OF USE";
-"settings.privacyPolicy"    = "PRIVACY POLICY";
-"settings.restorePurchases" = "RESTORE PURCHASES";
+"button.settings.language"              = "LANGUAGE";
+"button.settings.termsOfUse"            = "TERMS OF USE";
+"button.settings.privacyPolicy"         = "PRIVACY POLICY";
+"button.settings.restorePurchases"      = "RESTORE PURCHASES";
 
 // MARK: - Cards Screen
 
-"cards.next"                = "NEXT";
-"cards.nhie"                = "NEVER HAVE I EVER";
+"button.game.next"                      = "NEXT";
+"game.nhie"                             = "NEVER HAVE I EVER";
 
 // MARK: - Game Over
 
-"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
-"gameover.playAgain"        = "PLAY AGAIN";
-"gameover.rateUs"           = "RATE US";
+"gameover.playMoreCards"                = "PLAY MORE CARDS IN OTHER CATEGORIES";
+"button.gameover.playAgain"             = "PLAY AGAIN";
+"button.gameover.rateUs"                = "RATE US";
 
 // MARK: - Language Popup
 
-"language.select"           = "SELECT";
-"language.cancel"           = "CANCEL";
+"button.language.select"                = "SELECT";
+"button.language.cancel"                = "CANCEL";
 
 // MARK: - Alerts
 
-"alertTitle.noInternet" = "NO INTERNET CONNECTION";
-"alertBody.noInternet" = "There is no internet connection. Please connect to the network and try again";
+"alert.noConnection.title"              = "NO INTERNET CONNECTION";
+"alert.noConnection.message"            = "There is no internet connection. Please connect to the network and try again";
 
-"alertTitle.subscribed" = "SUBSCRIBED";
-"alertBody.subscribed" = "You are already subscribed. All functionality is available to you";
+"alert.subscribed.title"                = "SUBSCRIBED";
+"alert.subscribed.message"              = "You are already subscribed. All functionality is available to you";
 
-"alertTitle.restored" = "RESTORED";
-"alertBody.restored" = "You have successfully restored your subscription. All functionality is now available to you";
+"alert.restored.title"                  = "RESTORED";
+"alert.restored.message"                = "You have successfully restored your subscription. All functionality is now available to you";
 
-"alertTitle.notSubscriber" = "CANNOT BE RESTORED";
-"alertBody.notSubscriber" = "Sorry, you cannot restore your purchase because you do not have an active subscription";
+"alert.notSubscriber.title"             = "CANNOT BE RESTORED";
+"alert.notSubscriber.message"           = "Sorry, you cannot restore your purchase because you do not have an active subscription";
 
-"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
-"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";
+"alert.noCategoriesChoosen.title"       = "NO CATEGORIES CHOOSEN";
+"alert.noCategoriesChoosen.message"     = "Please, choose at least one category to start the game";
+
+// MARK: - Subscription
+
+"subscription.interval.day.one"         = "day";
+"subscription.interval.day.two"         = "days";
+"subscription.interval.day.five"        = "days";
+"subscription.interval.week.one"        = "week";
+"subscription.interval.week.two"        = "weeks";
+"subscription.interval.week.five"       = "weeks";
+"subscription.interval.month.one"       = "month";
+"subscription.interval.month.two"       = "months";
+"subscription.interval.month.five"      = "months";
+"subscription.interval.year.one"        = "year";
+"subscription.interval.year.two"        = "years";
+"subscription.interval.year.five"       = "years";
+
+"button.subscription.restore"           = "RESTORE PURCHASES";
+"subscription.cancelInfo"               = "CANCEL ANYTIME";

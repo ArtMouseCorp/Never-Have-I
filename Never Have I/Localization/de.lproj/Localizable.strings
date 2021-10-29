@@ -1,47 +1,62 @@
 
-// MARK: - Common
-
-
 // MARK: - Main Screen
 
-"main.play"                 = "SPIEL STARTEN";
+"button.main.play"                      = "SPIELEN";
 
 // MARK: - Settings Screen
 
-"settings.language"         = "SPRACHE";
-"settings.termsOfUse"       = "NUTZUNGSBEDINGUNGEN";
-"settings.privacyPolicy"    = "DATENSCHUTZ";
-"settings.restorePurchases" = "KÄUFE WIEDERHERSTELLEN";
+"button.settings.language"              = "SPRACHE";
+"button.settings.termsOfUse"            = "NUTZUNGSBEDINGUNGEN";
+"button.settings.privacyPolicy"         = "DATENSCHUTZPOLITIK";
+"button.settings.restorePurchases"      = "KÄUFE WIEDERHERSTELLEN";
 
 // MARK: - Cards Screen
 
-"cards.next"                = "WEITER";
-"cards.nhie"                = "ICH HABE NIE";
+"button.game.next"                      = "WEITER";
+"game.nhie"                             = "ICH HABE NOCH NIE";
 
 // MARK: - Game Over
 
-"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
-"gameover.playAgain"        = "PLAY AGAIN";
-"gameover.rateUs"           = "RATE US";
+"gameover.playMoreCards"                = "MEHR KARTEN IN ANDEREN KATEGORIEN SPIELEN";
+"button.gameover.playAgain"             = "WIEDER SPIELEN";
+"button.gameover.rateUs"                = "RATE US";
 
 // MARK: - Language Popup
 
-"language.select"           = "WÄHLEN";
-"language.cancel"           = "ABBRECHEN";
+"button.language.select"                = "WÄHLEN";
+"button.language.cancel"                = "ABBRECHEN";
 
 // MARK: - Alerts
 
-"alertTitle.noInternet" = "KEINE INTERNETVERBINDUNG";
-"alertBody.noInternet" = "Es besteht keine Internetverbindung. Bitte stellen Sie eine Verbindung zum Netzwerk her und versuchen Sie es erneut";
+"alert.noConnection.title"              = "KEINE INTERNETVERBINDUNG";
+"alert.noConnection.message"            = "Es besteht keine Internetverbindung. Bitte verbinden Sie sich mit dem Netzwerk und versuchen Sie es erneut.";
 
-"alertTitle.subscribed" = "ABONNIERT";
-"alertBody.subscribed" = "Sie sind bereits angemeldet. Alle Funktionen stehen Ihnen zur Verfügung";
+"alert.subscribed.title"                = "ABONNIERT";
+"alert.subscribed.message"              = "Sie sind bereits abonniert. Alle Funktionen sind für Sie verfügbar.";
 
-"alertTitle.restored" = "WIEDERHERGESTELLT";
-"alertBody.restored" = "Sie haben Ihr Abonnement erfolgreich wiederhergestellt. Alle Funktionen sind jetzt für Sie verfügbar";
+"alert.restored.title"                  = "WIEDERHERGESTELLT";
+"alert.restored.message"                = "Sie haben Ihr Abonnement erfolgreich wiederhergestellt. Alle Funktionen stehen Ihnen jetzt zur Verfügung.";
 
-"alertTitle.notSubscriber" = "KANN NICHT WIEDERHERGESTELLT WERDEN";
-"alertBody.notSubscriber" = "Sie können Ihren Einkauf leider nicht wiederherstellen, da Sie kein aktives Abonnement haben";
+"alert.notSubscriber.title"             = "KANN NICHT WIEDERHERGESTELLT WERDEN";
+"alert.notSubscriber.message"           = "Leider können Sie Ihren Kauf nicht wiederherstellen, da Sie kein aktives Abonnement haben.";
 
-"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
-"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";
+"alert.noCategoriesChoosen.title"       = "KEINE KATEGORIEN AUSGEWÄHLT";
+"alert.noCategoriesChoosen.message"     = "Bitte wählen Sie mindestens eine Kategorie, um das Spiel zu starten";
+
+// MARK: - Subscription
+
+"subscription.interval.day.one"         = "Tag";
+"subscription.interval.day.two"         = "Tage";
+"subscription.interval.day.five"        = "Tage";
+"subscription.interval.week.one"        = "Woche";
+"subscription.interval.week.two"        = "Wochen";
+"subscription.interval.week.five"       = "Wochen";
+"subscription.interval.month.one"       = "Monat";
+"subscription.interval.month.two"       = "Monate";
+"subscription.interval.month.five"      = "Monate";
+"subscription.interval.year.one"        = "Jahr";
+"subscription.interval.year.two"        = "Jahre";
+"subscription.interval.year.five"       = "Jahre";
+
+"button.subscription.restore"           = "KÄUFE WIEDERHERSTELLEN";
+"subscription.cancelInfo"               = "JEDERZEIT STORNIERBAR";

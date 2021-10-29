@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ApphudSDK",
+        "repositoryURL": "https://github.com/apphud/ApphudSDK",
+        "state": {
+          "branch": null,
+          "revision": "c25576f2f3682fa57b07ef089b0bdefd38829737",
+          "version": "2.4.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

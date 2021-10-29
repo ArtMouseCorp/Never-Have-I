@@ -31,27 +31,22 @@ class LanguagePopupViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateIn()
-        localize()
-        lastSelectedLanguage = State.shared.getLanguage()
+        lastSelectedLanguage = State.shared.getLanguageCode()
         super.hapticFeedback()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        configureUI()
     }
     
     // MARK: - Custom functions
     
-    private func localize() {
-        languageLabel.localize(with: "settings.language", defaultValue: "LANGUAGE")
-        selectButton.setTitleWithoutAnimation(title: getLocalizedString(for: "language.select", defaultValue: "SELECT"))
-        cancelButton.setTitleWithoutAnimation(title: getLocalizedString(for: "language.cancel", defaultValue: "CANCEL"))
+    override func localize() {
+        languageLabel.localize(with: "button.settings.language")
+        selectButton.setTitleWithoutAnimation(title: localized("button.language.select"))
+        cancelButton.setTitleWithoutAnimation(title: localized("button.language.cancel"))
     }
     
-    private func configureUI() {
+    override func configureUI() {
         configure(tableView)
-        backgroundView.roundCorners(radius: 18, corners: .allCorners)
-        selectButton.roundCorners(radius: 12, corners: .allCorners)
+        backgroundView.roundCorners(radius: 18)
+        selectButton.roundCorners(radius: 12)
         tableViewHeightConstraint.constant = tableView.contentHeight
         addButtonShadow()
     }
@@ -104,7 +99,7 @@ extension LanguagePopupViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.languageCell.id, for: indexPath) as! LanguageTableViewCell
         
         cell.titleLabel.text = Language.languages[indexPath.row].name
-        let index = Language.languages.firstIndex{ $0.code == State.shared.getLanguage() }
+        let index = Language.languages.firstIndex{ $0.code == State.shared.getLanguageCode() }
         index == indexPath.row ? cell.setChecked() : cell.setUnchecked()
         
         return cell

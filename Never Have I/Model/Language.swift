@@ -26,12 +26,10 @@ struct Language {
             default: self = .en
             }
         }
-    }
-    
-    public static func getLang(code: Code) -> Language {
-        return languages.first { lang in
-            lang.code == code
-        }!
+        
+        public func getLanguage() -> Language {
+            return (Language.languages.first { $0.code == self })!
+        }
     }
     
     public static var languages = [

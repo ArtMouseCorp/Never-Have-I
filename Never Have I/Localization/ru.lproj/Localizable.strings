@@ -1,47 +1,62 @@
 
-// MARK: - Common
-
-
 // MARK: - Main Screen
 
-"main.play"                 = "ИГРАТЬ";
+"button.main.play"                      = "ИГРАТЬ";
 
 // MARK: - Settings Screen
 
-"settings.language"         = "ЯЗЫК";
-"settings.termsOfUse"       = "УСЛОВИЯ ПОЛЬЗОВАНИЯ";
-"settings.privacyPolicy"    = "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ";
-"settings.restorePurchases" = "ВОССТАНОВИТЬ ПОКУПКИ";
+"button.settings.language"              = "ЯЗЫК";
+"button.settings.termsOfUse"            = "УСЛОВИЯ ПОЛЬЗОВАНИЯ";
+"button.settings.privacyPolicy"         = "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ";
+"button.settings.restorePurchases"      = "ВОССТАНОВИТЬ ПОКУПКИ";
 
 // MARK: - Cards Screen
 
-"cards.next"                = "СЛЕДУЮЩАЯ";
-"cards.nhie"                = "Я НИКОГДА НЕ";
+"button.game.next"                      = "СЛЕДУЮЩАЯ";
+"game.nhie"                             = "Я НИКОГДА НЕ";
 
 // MARK: - Game Over
 
-"gameover.playMoreCards"    = "ПОПРОБУЙТЕ ДРУГИЕ КАТЕГОРИИ";
-"gameover.playAgain"        = "ИГРАТЬ СНОВА";
-"gameover.rateUs"           = "ОЦЕНИТЬ НАС";
+"gameover.playMoreCards"                = "ПОПРОБУЙТЕ ДРУГИЕ КАТЕГОРИИ";
+"button.gameover.playAgain"             = "ИГРАТЬ СНОВА";
+"button.gameover.rateUs"                = "ОЦЕНИТЬ НАС";
 
 // MARK: - Language Popup
 
-"language.select"           = "ВЫБРАТЬ";
-"language.cancel"           = "ОТМЕНА";
+"button.language.select"                = "ВЫБРАТЬ";
+"button.language.cancel"                = "ОТМЕНА";
 
 // MARK: - Alerts
 
-"alertTitle.noInternet" = "ОТСУТСТВУЕТ ИНТЕРНЕТ СОЕДИНЕНИЕ";
-"alertBody.noInternet" = "Отсутствует интернет соединение. Пожалуйста подключитесь к сети и попробуйте снова";
+"alert.noConnection.title"              = "ОТСУТСТВУЕТ ИНТЕРНЕТ СОЕДИНЕНИЕ";
+"alert.noConnection.message"            = "Отсутствует интернет соединение. Пожалуйста подключитесь к сети и попробуйте снова";
 
-"alertTitle.subscribed" = "ВЫ ПОДПИСАНЫ";
-"alertBody.subscribed" = "Вы уже подписаны. Вам доступен весь функционал";
+"alert.subscribed.title"                = "ВЫ ПОДПИСАНЫ";
+"alert.subscribed.message"              = "Вы уже подписаны. Вам доступен весь функционал";
 
-"alertTitle.restored" = "ВОССТАНОВЛЕНО";
-"alertBody.restored" = "Вы успешно восстановили свою подписку. Все функции теперь доступны для вас";
+"alert.restored.title"                  = "ВОССТАНОВЛЕНО";
+"alert.restored.message"                = "Вы успешно восстановили свою подписку. Все функции теперь доступны для вас";
 
-"alertTitle.notSubscriber" = "НЕЛЬЗЯ ВОССТАНОВИТЬ";
-"alertBody.notSubscriber" = "Извините, вы не можете восстановись вашу покупку, так как у вас нету активной подписки";
+"alert.notSubscriber.title"             = "НЕЛЬЗЯ ВОССТАНОВИТЬ";
+"alert.notSubscriber.message"           = "Извините, вы не можете восстановись вашу покупку, так как у вас нету активной подписки";
 
-"alertTitle.noCategoriesChoosen" = "КАТЕГОРИИ НЕ ВЫБРАНЫ";
-"alertBody.noCategoriesChoosen" = "Пожалуйста, выберите хотя бы одну категорию чтобы начать игру";
+"alert.noCategoriesChoosen.title"       = "КАТЕГОРИИ НЕ ВЫБРАНЫ";
+"alert.noCategoriesChoosen.message"     = "Пожалуйста, выберите хотя бы одну категорию чтобы начать игру";
+
+// MARK: - Subscription
+
+"subscription.interval.day.one"         = "день";
+"subscription.interval.day.two"         = "дня";
+"subscription.interval.day.five"        = "дней";
+"subscription.interval.week.one"        = "неделя";
+"subscription.interval.week.two"        = "недели";
+"subscription.interval.week.five"       = "недель";
+"subscription.interval.month.one"       = "месяц";
+"subscription.interval.month.two"       = "месяца";
+"subscription.interval.month.five"      = "месяцев";
+"subscription.interval.year.one"        = "год";
+"subscription.interval.year.two"        = "года";
+"subscription.interval.year.five"       = "лет";
+
+"button.subscription.restore"           = "ВОССТАНОВИТЬ ПОКУПКИ";
+"subscription.cancelInfo"               = "ОТМЕНА В ЛЮБОЕ ВРЕМЯ";

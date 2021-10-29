@@ -13,12 +13,6 @@ public var safeAreaBottomInset: CGFloat {
     return bottomPadding
 }
 
-public func getLocalizedString(for key: String, defaultValue: String) -> String {
-    let path = Bundle.main.path(forResource: State.shared.getLanguage().rawValue, ofType: "lproj")
-    let bundle = Bundle(path: path!)
-    return bundle!.localizedString(forKey: key, value: defaultValue, table: nil)
-}
-
 /*
  //           _._
  //        .-'   `

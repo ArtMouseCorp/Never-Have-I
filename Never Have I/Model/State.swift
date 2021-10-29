@@ -11,16 +11,23 @@ class State {
     // State properties
     
     private var appLaunch: Int = 0
+    
+    public var isSubscribed: Bool = false
+    
+    public var selectedCategories: [Category] = []
         
     // MARK: - Functions
     
-    public func getLanguage() -> Language.Code {
-        let code = userDefaults.string(forKey: UDKeys.language) ?? "eng"
+    public func getLanguageCode() -> Language.Code {
+        let code = userDefaults.string(forKey: UDKeys.language) ?? "en"
         return Language.Code.init(code)
     }
     
     public func setLanguage(to languageCode: Language.Code) {
         userDefaults.set(languageCode.rawValue, forKey: UDKeys.language)
+        
+        // Fetch new data
+        Category.get() {}
     }
     
     public func newAppLaunch() {

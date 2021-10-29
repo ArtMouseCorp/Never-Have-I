@@ -26,24 +26,22 @@ class SettingsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        localize()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setupGestures()
     }
     
     // MARK: - Custom functions
     
-    private func localize() {
-        languageLabel.localize(with: "settings.language", defaultValue: "LANGUAGE")
-        termsOfUseLabel.localize(with: "settings.termsOfUse", defaultValue: "TERMS OF USE")
-        privacyPolicyLabel.localize(with: "settings.privacyPolicy", defaultValue: "PRIVACY POLICY")
-        restorePurchasesLabel.localize(with: "settings.restorePurchases", defaultValue: "RESOTRE PURCHASES")
-        languageImageView.image = Language.languages.first { $0.code == State.shared.getLanguage() }?.image
+    override func localize() {
+        languageLabel.localize(with: "button.settings.language")
+        termsOfUseLabel.localize(with: "button.settings.termsOfUse")
+        privacyPolicyLabel.localize(with: "button.settings.privacyPolicy")
+        restorePurchasesLabel.localize(with: "button.settings.restorePurchases")
+        languageImageView.image = State.shared.getLanguageCode().getLanguage().image
     }
     
-    private func setupGestures() {
+    override func configureUI() {
+    }
+    
+    override func setupGestures() {
         languageView.addTapGesture(target: self, action: #selector(languageViewTapped))
         termsOfUseView.addTapGesture(target: self, action: #selector(termsOfUseViewTapped))
         privacyPolicyView.addTapGesture(target: self, action: #selector(privacyPolicyViewTapped))
@@ -62,22 +60,28 @@ class SettingsViewController: BaseViewController {
     }
     
     @objc func termsOfUseViewTapped() {
-        // TODO: - Present terms of use popup
         let infoViewController = InfoViewController.load(from: Main.info)
-        infoViewController.titleLabelText = getLocalizedString(for: "settings.termsOfUse", defaultValue: "TERMS OF USE")
-        self.present(infoViewController, animated: true, completion: nil)
+        infoViewController.titleLabelText = localized("button.settings.termsOfUse")
+        self.present(infoViewController, animated: true)
     }
     
     @objc func privacyPolicyViewTapped() {
-        // TODO: - present privacy policy popup
         let infoViewController = InfoViewController.load(from: Main.info)
-        infoViewController.titleLabelText = getLocalizedString(for: "settings.privacyPolicy", defaultValue: "PRIVACY POLICY")
-        self.present(infoViewController, animated: true, completion: nil)
+        infoViewController.titleLabelText = localized("button.settings.privacyPolicy")
+        self.present(infoViewController, animated: true)
     }
     
     @objc func restorePurchasesTapped() {
-        // TODO: - resotre purchases
 
+        guard isConnectedToNetwork() else {
+            self.showNetworkConnectionAlert()
+            return
+        }
+        
+        StoreManager.restore {
+            self.dismiss(animated: true)
+        }
+        
     }
     
     // MARK: - @IBActions

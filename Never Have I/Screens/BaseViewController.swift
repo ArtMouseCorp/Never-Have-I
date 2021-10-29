@@ -14,7 +14,17 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.localize()
+        self.configureUI()
+        self.setupGestures()
+    }
+    
     // MARK: - Custom functions
+    
+    open func localize() { }
+    open func configureUI() { }
+    open func setupGestures() { }
     
     public func configure(_ tableView: UITableView, with cells: Cell...) {
         tableView.delegate = self as? UITableViewDelegate

@@ -19,7 +19,7 @@ class AlertPopupViewController: BaseViewController {
     var titleLabelText = ""
     var descriptionLabelText = ""
     var mainButtonText = "OK"
-    var onMainButtonPressed: (()->()) = {}
+    var onMainButtonPress: (() -> ()) = { }
     
     // MARK: - Awake functions
     
@@ -32,31 +32,32 @@ class AlertPopupViewController: BaseViewController {
         
         animateIn()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        configureUI()
-    }
-    
+
     // MARK: - Custom functions
     
-    private func configureUI() {
-        alertView.roundCorners(radius: 18, corners: .allCorners)
+    override func configureUI() {
+        alertView.roundCorners(radius: 18)
         alertView.setBorder(width: 2, color: .white)
-        mainButon.roundCorners(radius: 12, corners: .allCorners)
+        mainButon.roundCorners(radius: 12)
+    }
+    
+    public func initialize(title: String, message: String) {
+        self.titleLabelText = title
+        self.descriptionLabelText = message
     }
     
     func animateIn() {
         alertView.transform = CGAffineTransform(scaleX: 0, y: 0)
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.65)
 
-        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: .curveEaseIn) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: .curveEaseIn) {
             self.alertView.transform = .identity
         }
     }
     
     func animateOut() {
         self.view.alpha = 1
-        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: .curveEaseIn) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: .curveEaseIn) {
             self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
             self.alertView.transform = CGAffineTransform(scaleX: 0, y: 0)
         } completion: { completed in
@@ -67,7 +68,7 @@ class AlertPopupViewController: BaseViewController {
     // MARK: - @IBActions
     
     @IBAction func mainButtonPressed(_ sender: Any) {
-        onMainButtonPressed()
+        onMainButtonPress()
         animateOut()
     }
 }

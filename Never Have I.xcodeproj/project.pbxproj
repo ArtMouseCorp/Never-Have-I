@@ -3,10 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280B13972725BF560099EC15 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13962725BF560099EC15 /* Config.swift */; };
+		280B13A32725CD9F0099EC15 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 280B13A22725CD9F0099EC15 /* ApphudSDK */; };
+		280B13A52725CE200099EC15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 280B13A42725CE200099EC15 /* GoogleService-Info.plist */; };
+		280B13AD2725CEA60099EC15 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13AC2725CEA60099EC15 /* NotificationService.swift */; };
+		280B13B12725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 280B13AA2725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		280B13B92725D00C0099EC15 /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13B82725D00C0099EC15 /* SKProduct.swift */; };
+		280B13BB2725D0650099EC15 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13BA2725D0650099EC15 /* StoreManager.swift */; };
+		280B13BF2725D4A30099EC15 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13BE2725D4A30099EC15 /* DatabaseManager.swift */; };
+		280B13C22725EE490099EC15 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13C12725EE490099EC15 /* RemoteConfig.swift */; };
+		280B13C42725EE800099EC15 /* SubscriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13C32725EE800099EC15 /* SubscriptionPage.swift */; };
+		2822D5FD272355F4003EA8BC /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2822D5FB272355F4003EA8BC /* Oswald-SemiBold.ttf */; };
+		2822D5FE272355F4003EA8BC /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2822D5FC272355F4003EA8BC /* Oswald-Medium.ttf */; };
+		2822D601272355FC003EA8BC /* categories_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2822D5FF272355FC003EA8BC /* categories_en.json */; };
+		2822D602272355FC003EA8BC /* categories_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 2822D600272355FC003EA8BC /* categories_ru.json */; };
 		286D333C2704B18C00E6761E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33332704B18C00E6761E /* UIColor.swift */; };
 		286D333D2704B18C00E6761E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33342704B18C00E6761E /* UIView.swift */; };
 		286D333E2704B18C00E6761E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33352704B18C00E6761E /* UIFont.swift */; };
@@ -17,7 +31,6 @@
 		286D33432704B18C00E6761E /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D333A2704B18C00E6761E /* UITableView.swift */; };
 		286D33442704B18C00E6761E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D333B2704B18C00E6761E /* UIViewController.swift */; };
 		286D33462704B1B900E6761E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33452704B1B900E6761E /* UIButton.swift */; };
-		286D334B2704B23700E6761E /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 286D334A2704B23600E6761E /* swiftgen.yml */; };
 		286D334C2704B25C00E6761E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 286D334E2704B25C00E6761E /* Localizable.strings */; };
 		286D33512704B2EA00E6761E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33502704B2EA00E6761E /* State.swift */; };
 		286D33582704B30B00E6761E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33522704B30B00E6761E /* Constants.swift */; };
@@ -29,6 +42,8 @@
 		286D33602704B3C600E6761E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D335F2704B3C600E6761E /* CategoryViewController.swift */; };
 		286D33632704B3D700E6761E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33622704B3D700E6761E /* BaseViewController.swift */; };
 		286D33652704B55700E6761E /* LanguagePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33642704B55700E6761E /* LanguagePopupViewController.swift */; };
+		2889657D272956860002B10C /* categories_de.json in Resources */ = {isa = PBXBuildFile; fileRef = 2889657C272956860002B10C /* categories_de.json */; };
+		2889657F272966770002B10C /* categories_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2889657E272966770002B10C /* categories_fr.json */; };
 		4A3ECF1C2704A3D100487902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3ECF1B2704A3D100487902 /* AppDelegate.swift */; };
 		4A3ECF1E2704A3D100487902 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3ECF1D2704A3D100487902 /* SceneDelegate.swift */; };
 		4A3ECF232704A3D100487902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3ECF212704A3D100487902 /* Main.storyboard */; };
@@ -36,14 +51,9 @@
 		4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3ECF262704A3D400487902 /* LaunchScreen.storyboard */; };
 		4A49E02D270F2A95005478E4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A49E02C270F2A95005478E4 /* InfoViewController.swift */; };
 		4A4CF750270852E400575D6C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF74F270852E400575D6C /* CardViewController.swift */; };
-		4A4CF7522708734B00575D6C /* categories_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CF7512708734B00575D6C /* categories_en.json */; };
-		4A4CF754270879C200575D6C /* categories_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CF753270879C200575D6C /* categories_ru.json */; };
 		4A4CF76A2709947500575D6C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF7692709947500575D6C /* Language.swift */; };
 		4A576993270C3D6E007E3AB1 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A576992270C3D6E007E3AB1 /* SubscriptionViewController.swift */; };
 		4A576995270C3D83007E3AB1 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A576994270C3D83007E3AB1 /* GameOverViewController.swift */; };
-		4A74ED5A270515AE00131643 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED59270515AE00131643 /* NavigationController.swift */; };
-		4A74ED5D270598CD00131643 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */; };
-		4A74ED5E270598CD00131643 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */; };
 		4A74ED6227059D8700131643 /* NHEButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6127059D8700131643 /* NHEButtonView.swift */; };
 		4A74ED6427059F7000131643 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6327059F7000131643 /* SettingsViewController.swift */; };
 		4A74ED6627059FBE00131643 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6527059FBE00131643 /* TaskViewController.swift */; };
@@ -51,10 +61,49 @@
 		4A74ED6D2705D90700131643 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6C2705D90700131643 /* CategoryTableViewCell.swift */; };
 		4A74ED6F2705E7E000131643 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74ED6E2705E7E000131643 /* LanguageTableViewCell.swift */; };
 		4A8A593A2709ABCC006C26DA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A59392709ABCC006C26DA /* Category.swift */; };
-		5922DD25F560E18C2133016C /* Pods_Never_Have_I.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F002E1AAB214EAB0638ADFA4 /* Pods_Never_Have_I.framework */; };
+		C3A6055F068FA2793836E459 /* Pods_Never_Have_I.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E227379C9F313B276A6E1E2 /* Pods_Never_Have_I.framework */; };
+		DD94153D37017883A7E5BBA1 /* Pods_FirebaseNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93ACDE9AD3F0B142F6818E1 /* Pods_FirebaseNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		280B13AF2725CEA60099EC15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A3ECF102704A3D100487902 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280B13A92725CEA60099EC15;
+			remoteInfo = FirebaseNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		280B13B52725CEA60099EC15 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				280B13B12725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		280B13962725BF560099EC15 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		280B13A42725CE200099EC15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		280B13AA2725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FirebaseNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		280B13AC2725CEA60099EC15 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		280B13AE2725CEA60099EC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280B13B82725D00C0099EC15 /* SKProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKProduct.swift; sourceTree = "<group>"; };
+		280B13BA2725D0650099EC15 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		280B13BE2725D4A30099EC15 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		280B13C12725EE490099EC15 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		280B13C32725EE800099EC15 /* SubscriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPage.swift; sourceTree = "<group>"; };
+		2822D5FB272355F4003EA8BC /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		2822D5FC272355F4003EA8BC /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		2822D5FF272355FC003EA8BC /* categories_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories_en.json; sourceTree = "<group>"; };
+		2822D600272355FC003EA8BC /* categories_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories_ru.json; sourceTree = "<group>"; };
 		286D33332704B18C00E6761E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		286D33342704B18C00E6761E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		286D33352704B18C00E6761E /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -65,7 +114,6 @@
 		286D333A2704B18C00E6761E /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		286D333B2704B18C00E6761E /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		286D33452704B1B900E6761E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		286D334A2704B23600E6761E /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		286D334D2704B25C00E6761E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		286D33502704B2EA00E6761E /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		286D33522704B30B00E6761E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -77,6 +125,8 @@
 		286D335F2704B3C600E6761E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		286D33622704B3D700E6761E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		286D33642704B55700E6761E /* LanguagePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopupViewController.swift; sourceTree = "<group>"; };
+		2889657C272956860002B10C /* categories_de.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories_de.json; sourceTree = "<group>"; };
+		2889657E272966770002B10C /* categories_fr.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories_fr.json; sourceTree = "<group>"; };
 		4A3ECF182704A3D100487902 /* Never Have I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Never Have I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3ECF1B2704A3D100487902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3ECF1D2704A3D100487902 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +136,6 @@
 		4A3ECF292704A3D400487902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A49E02C270F2A95005478E4 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4A4CF74F270852E400575D6C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		4A4CF7512708734B00575D6C /* categories_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories_en.json; path = Tasks/categories_en.json; sourceTree = SOURCE_ROOT; };
-		4A4CF753270879C200575D6C /* categories_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories_ru.json; path = Tasks/categories_ru.json; sourceTree = SOURCE_ROOT; };
 		4A4CF7602708FC0900575D6C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4A4CF7622708FC1700575D6C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A4CF7632708FC4600575D6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -97,9 +145,6 @@
 		4A4CF7692709947500575D6C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		4A576992270C3D6E007E3AB1 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		4A576994270C3D83007E3AB1 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
-		4A74ED59270515AE00131643 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-Medium.ttf"; path = "Fonts/Oswald-Medium.ttf"; sourceTree = SOURCE_ROOT; };
-		4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oswald-SemiBold.ttf"; path = "Fonts/Oswald-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
 		4A74ED6127059D8700131643 /* NHEButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHEButtonView.swift; sourceTree = "<group>"; };
 		4A74ED6327059F7000131643 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4A74ED6527059FBE00131643 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
@@ -107,29 +152,92 @@
 		4A74ED6C2705D90700131643 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4A74ED6E2705E7E000131643 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
 		4A8A59392709ABCC006C26DA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		4BBE68FEB33DF5548A7D5C14 /* Pods-Never Have I.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Never Have I.release.xcconfig"; path = "Target Support Files/Pods-Never Have I/Pods-Never Have I.release.xcconfig"; sourceTree = "<group>"; };
-		D3092D0C94FAADD1BDF55266 /* Pods-Never Have I.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Never Have I.debug.xcconfig"; path = "Target Support Files/Pods-Never Have I/Pods-Never Have I.debug.xcconfig"; sourceTree = "<group>"; };
-		F002E1AAB214EAB0638ADFA4 /* Pods_Never_Have_I.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Never_Have_I.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53253ED07791540914219DB4 /* Pods-FirebaseNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-FirebaseNotificationServiceExtension/Pods-FirebaseNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		71B4562DD313B4EAF8C70384 /* Pods-Never Have I.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Never Have I.release.xcconfig"; path = "Target Support Files/Pods-Never Have I/Pods-Never Have I.release.xcconfig"; sourceTree = "<group>"; };
+		7B68BE58458AB629FCC46FF2 /* Pods-Never Have I.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Never Have I.debug.xcconfig"; path = "Target Support Files/Pods-Never Have I/Pods-Never Have I.debug.xcconfig"; sourceTree = "<group>"; };
+		8E227379C9F313B276A6E1E2 /* Pods_Never_Have_I.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Never_Have_I.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93ACDE9AD3F0B142F6818E1 /* Pods_FirebaseNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E23C0D718CA6FBC3E5AE71 /* Pods-FirebaseNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseNotificationServiceExtension/Pods-FirebaseNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		280B13A72725CEA60099EC15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD94153D37017883A7E5BBA1 /* Pods_FirebaseNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3ECF152704A3D100487902 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5922DD25F560E18C2133016C /* Pods_Never_Have_I.framework in Frameworks */,
+				280B13A32725CD9F0099EC15 /* ApphudSDK in Frameworks */,
+				C3A6055F068FA2793836E459 /* Pods_Never_Have_I.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280B13AB2725CEA60099EC15 /* FirebaseNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				280B13AC2725CEA60099EC15 /* NotificationService.swift */,
+				280B13AE2725CEA60099EC15 /* Info.plist */,
+			);
+			path = FirebaseNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		280B13C02725EE3D0099EC15 /* Remote Config */ = {
+			isa = PBXGroup;
+			children = (
+				280B13C12725EE490099EC15 /* RemoteConfig.swift */,
+				280B13C32725EE800099EC15 /* SubscriptionPage.swift */,
+			);
+			path = "Remote Config";
+			sourceTree = "<group>";
+		};
+		2822D5F7272355C5003EA8BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2822D5FA272355D1003EA8BC /* Tasks */,
+				2822D5F8272355CB003EA8BC /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2822D5F8272355CB003EA8BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2822D5FC272355F4003EA8BC /* Oswald-Medium.ttf */,
+				2822D5FB272355F4003EA8BC /* Oswald-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2822D5FA272355D1003EA8BC /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				2822D5FF272355FC003EA8BC /* categories_en.json */,
+				2822D600272355FC003EA8BC /* categories_ru.json */,
+				2889657C272956860002B10C /* categories_de.json */,
+				2889657E272966770002B10C /* categories_fr.json */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		286D33282704B0A900E6761E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				280B13C02725EE3D0099EC15 /* Remote Config */,
 				286D33542704B30B00E6761E /* Screens */,
 				286D33522704B30B00E6761E /* Constants.swift */,
 				286D33532704B30B00E6761E /* Util.swift */,
+				280B13962725BF560099EC15 /* Config.swift */,
+				280B13BA2725D0650099EC15 /* StoreManager.swift */,
+				280B13BE2725D4A30099EC15 /* DatabaseManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -139,6 +247,7 @@
 			children = (
 				4A3ECF1B2704A3D100487902 /* AppDelegate.swift */,
 				4A3ECF1D2704A3D100487902 /* SceneDelegate.swift */,
+				280B13A42725CE200099EC15 /* GoogleService-Info.plist */,
 				4A3ECF292704A3D400487902 /* Info.plist */,
 			);
 			name = Application;
@@ -162,24 +271,6 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		286D332C2704B0D400E6761E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				286D33662704B75C00E6761E /* Tasks */,
-				286D332D2704B0D900E6761E /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		286D332D2704B0D900E6761E /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4A74ED5B270598CC00131643 /* Oswald-Medium.ttf */,
-				4A74ED5C270598CD00131643 /* Oswald-SemiBold.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		286D332F2704B0EF00E6761E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +284,7 @@
 				286D333A2704B18C00E6761E /* UITableView.swift */,
 				286D33342704B18C00E6761E /* UIView.swift */,
 				286D333B2704B18C00E6761E /* UIViewController.swift */,
+				280B13B82725D00C0099EC15 /* SKProduct.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				286D335F2704B3C600E6761E /* CategoryViewController.swift */,
-				4A74ED59270515AE00131643 /* NavigationController.swift */,
 				4A74ED6327059F7000131643 /* SettingsViewController.swift */,
 				4A74ED6527059FBE00131643 /* TaskViewController.swift */,
 				4A576992270C3D6E007E3AB1 /* SubscriptionViewController.swift */,
@@ -235,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				286D334E2704B25C00E6761E /* Localizable.strings */,
-				286D334A2704B23600E6761E /* swiftgen.yml */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -270,22 +360,14 @@
 			path = Popups;
 			sourceTree = "<group>";
 		};
-		286D33662704B75C00E6761E /* Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				4A4CF753270879C200575D6C /* categories_ru.json */,
-				4A4CF7512708734B00575D6C /* categories_en.json */,
-			);
-			path = Tasks;
-			sourceTree = "<group>";
-		};
 		4A3ECF0F2704A3D100487902 = {
 			isa = PBXGroup;
 			children = (
 				4A3ECF1A2704A3D100487902 /* Never Have I */,
+				280B13AB2725CEA60099EC15 /* FirebaseNotificationServiceExtension */,
 				4A3ECF192704A3D100487902 /* Products */,
 				BC0DEA74C0D802D26FC44A41 /* Pods */,
-				FF70A967FF1F207050618854 /* Frameworks */,
+				C4E6D48C3DDCF28A08BE6E93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3ECF182704A3D100487902 /* Never Have I.app */,
+				280B13AA2725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,7 +388,7 @@
 				286D332F2704B0EF00E6761E /* Extensions */,
 				286D33472704B1F000E6761E /* Localization */,
 				286D334F2704B27000E6761E /* Model */,
-				286D332C2704B0D400E6761E /* Resources */,
+				2822D5F7272355C5003EA8BC /* Resources */,
 				286D332B2704B0CF00E6761E /* Screens */,
 				286D33282704B0A900E6761E /* Utils */,
 				286D332A2704B0CA00E6761E /* Views */,
@@ -333,16 +416,19 @@
 		BC0DEA74C0D802D26FC44A41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3092D0C94FAADD1BDF55266 /* Pods-Never Have I.debug.xcconfig */,
-				4BBE68FEB33DF5548A7D5C14 /* Pods-Never Have I.release.xcconfig */,
+				F9E23C0D718CA6FBC3E5AE71 /* Pods-FirebaseNotificationServiceExtension.debug.xcconfig */,
+				53253ED07791540914219DB4 /* Pods-FirebaseNotificationServiceExtension.release.xcconfig */,
+				7B68BE58458AB629FCC46FF2 /* Pods-Never Have I.debug.xcconfig */,
+				71B4562DD313B4EAF8C70384 /* Pods-Never Have I.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FF70A967FF1F207050618854 /* Frameworks */ = {
+		C4E6D48C3DDCF28A08BE6E93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F002E1AAB214EAB0638ADFA4 /* Pods_Never_Have_I.framework */,
+				C93ACDE9AD3F0B142F6818E1 /* Pods_FirebaseNotificationServiceExtension.framework */,
+				8E227379C9F313B276A6E1E2 /* Pods_Never_Have_I.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -350,21 +436,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A3ECF172704A3D100487902 /* Never Have I */ = {
+		280B13A92725CEA60099EC15 /* FirebaseNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A3ECF2C2704A3D400487902 /* Build configuration list for PBXNativeTarget "Never Have I" */;
+			buildConfigurationList = 280B13B22725CEA60099EC15 /* Build configuration list for PBXNativeTarget "FirebaseNotificationServiceExtension" */;
 			buildPhases = (
-				F9A92C82CBDC9DCD627E002B /* [CP] Check Pods Manifest.lock */,
-				4A3ECF142704A3D100487902 /* Sources */,
-				4A3ECF152704A3D100487902 /* Frameworks */,
-				4A3ECF162704A3D100487902 /* Resources */,
-				8770C873BCEB1033D4D79E83 /* [CP] Embed Pods Frameworks */,
+				AD6230F6F51BD5DB875C5C5A /* [CP] Check Pods Manifest.lock */,
+				280B13A62725CEA60099EC15 /* Sources */,
+				280B13A72725CEA60099EC15 /* Frameworks */,
+				280B13A82725CEA60099EC15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = FirebaseNotificationServiceExtension;
+			productName = FirebaseNotificationServiceExtension;
+			productReference = 280B13AA2725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4A3ECF172704A3D100487902 /* Never Have I */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A3ECF2C2704A3D400487902 /* Build configuration list for PBXNativeTarget "Never Have I" */;
+			buildPhases = (
+				C57C58E1A03EFE487410396D /* [CP] Check Pods Manifest.lock */,
+				4A3ECF142704A3D100487902 /* Sources */,
+				4A3ECF152704A3D100487902 /* Frameworks */,
+				4A3ECF162704A3D100487902 /* Resources */,
+				280B13B52725CEA60099EC15 /* Embed App Extensions */,
+				28ACF8B22726A0DE00BD87DD /* Firebase Crashlytics */,
+				199BDDE180B09101B85C2848 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280B13B02725CEA60099EC15 /* PBXTargetDependency */,
+			);
 			name = "Never Have I";
+			packageProductDependencies = (
+				280B13A22725CD9F0099EC15 /* ApphudSDK */,
+			);
 			productName = "Never Have I";
 			productReference = 4A3ECF182704A3D100487902 /* Never Have I.app */;
 			productType = "com.apple.product-type.application";
@@ -375,9 +485,12 @@
 		4A3ECF102704A3D100487902 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					280B13A92725CEA60099EC15 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					4A3ECF172704A3D100487902 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -395,36 +508,49 @@
 				fr,
 			);
 			mainGroup = 4A3ECF0F2704A3D100487902;
+			packageReferences = (
+				280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+			);
 			productRefGroup = 4A3ECF192704A3D100487902 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4A3ECF172704A3D100487902 /* Never Have I */,
+				280B13A92725CEA60099EC15 /* FirebaseNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		280B13A82725CEA60099EC15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3ECF162704A3D100487902 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2889657D272956860002B10C /* categories_de.json in Resources */,
 				4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */,
-				286D334B2704B23700E6761E /* swiftgen.yml in Resources */,
-				4A4CF754270879C200575D6C /* categories_ru.json in Resources */,
+				2822D5FD272355F4003EA8BC /* Oswald-SemiBold.ttf in Resources */,
+				280B13A52725CE200099EC15 /* GoogleService-Info.plist in Resources */,
+				2889657F272966770002B10C /* categories_fr.json in Resources */,
+				2822D602272355FC003EA8BC /* categories_ru.json in Resources */,
+				2822D601272355FC003EA8BC /* categories_en.json in Resources */,
+				2822D5FE272355F4003EA8BC /* Oswald-Medium.ttf in Resources */,
 				286D334C2704B25C00E6761E /* Localizable.strings in Resources */,
-				4A74ED5D270598CD00131643 /* Oswald-Medium.ttf in Resources */,
 				4A3ECF252704A3D400487902 /* Assets.xcassets in Resources */,
 				4A3ECF232704A3D100487902 /* Main.storyboard in Resources */,
-				4A74ED5E270598CD00131643 /* Oswald-SemiBold.ttf in Resources */,
-				4A4CF7522708734B00575D6C /* categories_en.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8770C873BCEB1033D4D79E83 /* [CP] Embed Pods Frameworks */ = {
+		199BDDE180B09101B85C2848 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,7 +567,49 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Never Have I/Pods-Never Have I-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9A92C82CBDC9DCD627E002B /* [CP] Check Pods Manifest.lock */ = {
+		28ACF8B22726A0DE00BD87DD /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		AD6230F6F51BD5DB875C5C5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C57C58E1A03EFE487410396D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,6 +634,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		280B13A62725CEA60099EC15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280B13AD2725CEA60099EC15 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A3ECF142704A3D100487902 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,24 +657,29 @@
 				4A8A593A2709ABCC006C26DA /* Category.swift in Sources */,
 				4A3ECF1C2704A3D100487902 /* AppDelegate.swift in Sources */,
 				4A4CF750270852E400575D6C /* CardViewController.swift in Sources */,
+				280B13BB2725D0650099EC15 /* StoreManager.swift in Sources */,
 				4A74ED6627059FBE00131643 /* TaskViewController.swift in Sources */,
 				286D333C2704B18C00E6761E /* UIColor.swift in Sources */,
+				280B13BF2725D4A30099EC15 /* DatabaseManager.swift in Sources */,
 				286D335B2704B30B00E6761E /* Storyboards.swift in Sources */,
 				4A74ED682705A07200131643 /* AlertPopupViewController.swift in Sources */,
 				4A74ED6227059D8700131643 /* NHEButtonView.swift in Sources */,
 				286D33592704B30B00E6761E /* Util.swift in Sources */,
+				280B13C42725EE800099EC15 /* SubscriptionPage.swift in Sources */,
 				286D33422704B18C00E6761E /* UIImage.swift in Sources */,
 				286D335A2704B30B00E6761E /* Cells.swift in Sources */,
 				286D33432704B18C00E6761E /* UITableView.swift in Sources */,
 				4A74ED6D2705D90700131643 /* CategoryTableViewCell.swift in Sources */,
 				286D33512704B2EA00E6761E /* State.swift in Sources */,
 				4A74ED6F2705E7E000131643 /* LanguageTableViewCell.swift in Sources */,
-				4A74ED5A270515AE00131643 /* NavigationController.swift in Sources */,
 				4A49E02D270F2A95005478E4 /* InfoViewController.swift in Sources */,
 				4A4CF76A2709947500575D6C /* Language.swift in Sources */,
+				280B13B92725D00C0099EC15 /* SKProduct.swift in Sources */,
+				280B13C22725EE490099EC15 /* RemoteConfig.swift in Sources */,
 				286D333E2704B18C00E6761E /* UIFont.swift in Sources */,
 				286D33602704B3C600E6761E /* CategoryViewController.swift in Sources */,
 				286D33582704B30B00E6761E /* Constants.swift in Sources */,
+				280B13972725BF560099EC15 /* Config.swift in Sources */,
 				4A576993270C3D6E007E3AB1 /* SubscriptionViewController.swift in Sources */,
 				4A3ECF1E2704A3D100487902 /* SceneDelegate.swift in Sources */,
 				286D335E2704B34A00E6761E /* Popups.swift in Sources */,
@@ -509,6 +690,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280B13B02725CEA60099EC15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280B13A92725CEA60099EC15 /* FirebaseNotificationServiceExtension */;
+			targetProxy = 280B13AF2725CEA60099EC15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		286D334E2704B25C00E6761E /* Localizable.strings */ = {
@@ -544,6 +733,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		280B13B32725CEA60099EC15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E23C0D718CA6FBC3E5AE71 /* Pods-FirebaseNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95G2CDLKC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FirebaseNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		280B13B42725CEA60099EC15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53253ED07791540914219DB4 /* Pods-FirebaseNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95G2CDLKC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FirebaseNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4A3ECF2A2704A3D400487902 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -664,11 +909,13 @@
 		};
 		4A3ECF2D2704A3D400487902 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3092D0C94FAADD1BDF55266 /* Pods-Never Have I.debug.xcconfig */;
+			baseConfigurationReference = 7B68BE58458AB629FCC46FF2 /* Pods-Never Have I.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				INFOPLIST_FILE = "Never Have I/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -685,11 +932,13 @@
 		};
 		4A3ECF2E2704A3D400487902 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BBE68FEB33DF5548A7D5C14 /* Pods-Never Have I.release.xcconfig */;
+			baseConfigurationReference = 71B4562DD313B4EAF8C70384 /* Pods-Never Have I.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				INFOPLIST_FILE = "Never Have I/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -707,6 +956,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		280B13B22725CEA60099EC15 /* Build configuration list for PBXNativeTarget "FirebaseNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280B13B32725CEA60099EC15 /* Debug */,
+				280B13B42725CEA60099EC15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A3ECF132704A3D100487902 /* Build configuration list for PBXProject "Never Have I" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -726,6 +984,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		280B13A22725CD9F0099EC15 /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A3ECF102704A3D100487902 /* Project object */;
 }

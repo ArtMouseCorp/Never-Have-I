@@ -13,6 +13,43 @@ extension UIViewController {
         popup.didMove(toParent: self)
     }
     
+    
+    public func showAlreadySubscribedAlert(completion: (() -> ())? = nil) {
+        let alert = AlertPopupViewController.load(from: Popup.alert)
+        alert.initialize(title: localized("alert.subscribed.title"), message: localized("alert.subscribed.message"))
+        alert.onMainButtonPress = {
+            completion?() ?? ()
+        }
+        self.showPopup(alert)
+    }
+    
+    public func showRestoredAlert(completion: (() -> ())? = nil) {
+        let alert = AlertPopupViewController.load(from: Popup.alert)
+        alert.initialize(title: localized("alert.restored.title"), message: localized("alert.restored.message"))
+        alert.onMainButtonPress = {
+            completion?() ?? ()
+        }
+        self.showPopup(alert)
+    }
+    
+    public func showNotSubscriberAlert(completion: (() -> ())? = nil) {
+        let alert = AlertPopupViewController.load(from: Popup.alert)
+        alert.initialize(title: localized("alert.notSubscriber.title"), message: localized("alert.notSubscriber.message"))
+        alert.onMainButtonPress = {
+            completion?() ?? ()
+        }
+        self.showPopup(alert)
+    }
+    
+    public func showNetworkConnectionAlert(completion: (() -> ())? = nil) {
+        let alert = AlertPopupViewController.load(from: Popup.alert)
+        alert.initialize(title: localized("alert.noConnection.title"), message: localized("alert.noConnection.message"))
+        alert.onMainButtonPress = {
+            completion?() ?? ()
+        }
+        self.showPopup(alert)
+    }
+    
 }
 
 /*

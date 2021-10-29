@@ -1,47 +1,62 @@
 
-// MARK: - Common
-
-
 // MARK: - Main Screen
 
-"main.play"                 = "JOUER";
+"button.main.play"                      = "JEU";
 
 // MARK: - Settings Screen
 
-"settings.language"         = "LANGUE";
-"settings.termsOfUse"       = "CONDITIONS D'UTILISATION";
-"settings.privacyPolicy"    = "POLITIQUE DE CONFIDENTIALITÉ";
-"settings.restorePurchases" = "RESTAURER LES ACHATS";
+"button.settings.language"              = "LANGUE";
+"button.settings.termsOfUse"            = "CONDITIONS D'UTILISATION";
+"button.settings.privacyPolicy"         = "POLITIQUE DE CONFIDENTIALITÉ";
+"button.settings.restorePurchases"      = "RESTAURER LES ACHATS";
 
 // MARK: - Cards Screen
 
-"cards.next"                = "SUIVANT";
-"cards.nhie"                = "";
+"button.game.next"                      = "PROCHAIN";
+"game.nhie"                             = "JE NE L'AI JAMAIS FAIT";
 
 // MARK: - Game Over
 
-"gameover.playMoreCards"    = "PLAY MORE CARDS IN OTHER CATEGORIES";
-"gameover.playAgain"        = "PLAY AGAIN";
-"gameover.rateUs"           = "RATE US";
+"gameover.playMoreCards"                = "JOUER D'AUTRES CARTES DANS D'AUTRES CATÉGORIES";
+"button.gameover.playAgain"             = "REJOUER";
+"button.gameover.rateUs"                = "ÉVALUEZ-NOUS";
 
 // MARK: - Language Popup
 
-"language.select"           = "SÉLECTIONNER";
-"language.cancel"           = "ANNULER";
+"button.language.select"                = "SÉLECTIONNER";
+"button.language.cancel"                = "ANNULER";
 
 // MARK: - Alerts
 
-"alertTitle.noInternet" = "PAS DE CONNEXION INTERNET";
-"alertBody.noInternet" = "Il n'y a pas de connexion Internet. Veuillez vous connecter au réseau et réessayer";
+"alert.noConnection.title"              = "PAS DE CONNEXION INTERNET";
+"alert.noConnection.message"            = "Il n'y a pas de connexion Internet. Veuillez vous connecter au réseau et réessayer";
 
-"alertTitle.subscribed" = "ABONNÉ";
-"alertBody.subscribed" = "Vous êtes déjà abonné. Toutes les fonctionnalités sont à votre disposition";
+"alert.subscribed.title"                = "ABONNÉ";
+"alert.subscribed.message"              = "Vous êtes déjà inscrit. Toutes les fonctionnalités sont disponibles pour vous";
 
-"alertTitle.restored" = "RESTAURÉ";
-"alertBody.restored" = "Vous avez réussi à restaurer votre abonnement. Toutes les fonctionnalités sont désormais à votre disposition";
+"alert.restored.title"                  = "RESTAURÉ";
+"alert.restored.message"                = "Vous avez restauré votre abonnement avec succès. Toutes les fonctionnalités sont désormais à votre disposition";
 
-"alertTitle.notSubscriber" = "IMPOSSIBLE À RESTAURER";
-"alertBody.notSubscriber" = "Désolé, vous ne pouvez pas restaurer votre achat car vous n'avez pas d'abonnement actif";
+"alert.notSubscriber.title"             = "NE PEUT ÊTRE RESTAURÉ";
+"alert.notSubscriber.message"           = "Désolé, vous ne pouvez pas restaurer votre achat car vous n'avez pas d'abonnement actif.";
 
-"alertTitle.noCategoriesChoosen" = "NO CATEGORIES CHOOSEN";
-"alertBody.noCategoriesChoosen" = "Please, choose at least one category to start the game";
+"alert.noCategoriesChoosen.title"       = "AUCUNE CATÉGORIE CHOISIE";
+"alert.noCategoriesChoosen.message"     = "Veuillez choisir au moins une catégorie pour commencer le jeu.";
+
+// MARK: - Subscription
+
+"subscription.interval.day.one"         = "jour";
+"subscription.interval.day.two"         = "jours";
+"subscription.interval.day.five"        = "jours";
+"subscription.interval.week.one"        = "semaine";
+"subscription.interval.week.two"        = "semaines";
+"subscription.interval.week.five"       = "semaines";
+"subscription.interval.month.one"       = "mois";
+"subscription.interval.month.two"       = "mois";
+"subscription.interval.month.five"      = "mois";
+"subscription.interval.year.one"        = "année";
+"subscription.interval.year.two"        = "années";
+"subscription.interval.year.five"       = "années";
+
+"button.subscription.restore"           = "RESTAURER LES ACHATS";
+"subscription.cancelInfo"               = "ANNULER À TOUT MOMENT";
