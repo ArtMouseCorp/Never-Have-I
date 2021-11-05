@@ -30,6 +30,7 @@ class TaskViewController: BaseViewController {
         
         cardView.delegate = self
         cardView.dataSource = self
+        cardView.alphaValueSemiTransparent = 1
     }
     
     // MARK: - Custom functions

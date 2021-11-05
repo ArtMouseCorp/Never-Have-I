@@ -106,6 +106,7 @@ extension LanguagePopupViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        State.shared.setCustomLanguageChange(to: true)
         State.shared.setLanguage(to: Language.languages[indexPath.row].code)
         localize()
         tableView.reloadData()

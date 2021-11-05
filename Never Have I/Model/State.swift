@@ -18,8 +18,21 @@ class State {
         
     // MARK: - Functions
     
+    public func setCustomLanguageChange(to bool: Bool) {
+        userDefaults.set(bool, forKey: UDKeys.isCustomLanguageChange)
+    }
+    
+    public func isCustomLanguageChange() -> Bool {
+        return userDefaults.bool(forKey: UDKeys.isCustomLanguageChange)
+    }
+    
     public func getLanguageCode() -> Language.Code {
-        let code = userDefaults.string(forKey: UDKeys.language) ?? "en"
+        var code = Bundle.main.preferredLocalizations.first ?? "en"
+        
+        if self.isCustomLanguageChange() {
+            code = userDefaults.string(forKey: UDKeys.language) ?? "en"
+        }
+        
         return Language.Code.init(code)
     }
     
@@ -33,6 +46,7 @@ class State {
     public func newAppLaunch() {
         self.appLaunch = self.getAppLaunchCount() + 1
         userDefaults.set(self.appLaunch, forKey: UDKeys.appLaunchCount)
+        self.isFirstLaunch() ? self.setCustomLanguageChange(to: false) : ()
     }
     
     public func getAppLaunchCount() -> Int {

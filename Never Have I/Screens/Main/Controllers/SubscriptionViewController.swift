@@ -90,6 +90,7 @@ class SubscriptionViewController: BaseViewController {
         
         guard isConnectedToNetwork() else {
             self.showNetworkConnectionAlert() {
+                self.onCloseButtonPressed()
                 self.dismiss(animated: true)
             }
             return
@@ -100,6 +101,7 @@ class SubscriptionViewController: BaseViewController {
         StoreManager.getProducts(for: [productId]) { products in
             
             guard let product = products.first else {
+                self.onCloseButtonPressed()
                 self.dismiss(animated: true)
                 return
             }
@@ -164,6 +166,7 @@ class SubscriptionViewController: BaseViewController {
     @IBAction func startFreeTrialButtonPressed(_ sender: Any) {
         
         guard let product = product else {
+            self.onCloseButtonPressed()
             self.dismiss(animated: true)
             return
         }

@@ -52,9 +52,11 @@ struct Config {
     Our Services may contain links to external sites. Such as Facebook links, YouTube links and link content from external third party sources. Please note that the use of such third party sites or content is subject to the privacy policies and usage terms of the third party in question instead of our own terms and we do not have control or assume any liability over such content.
 
     <h>Changes To This Privacy Statement</h>
+    
     We have the discretion to update this privacy policy at any time. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.
 
     <h>Your Acceptance Of These Terms</h>
+    
     By using our services, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our services. Your continued use of our services following the posting of changes to this policy will be deemed your acceptance of those changes.
 
     <h>Contact Us</h>

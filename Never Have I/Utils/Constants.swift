@@ -3,8 +3,9 @@ import UIKit
 let userDefaults = UserDefaults.standard
 
 enum UDKeys {
-    static let appLaunchCount: String = "appLaunchCount"
-    static let language: String = "language"
+    public static let appLaunchCount: String            = "appLaunchCount"
+    public static let language: String                  = "language"
+    public static let isCustomLanguageChange: String    = "isCustomLanguageChange"
 }
 
 public var safeAreaBottomInset: CGFloat {
