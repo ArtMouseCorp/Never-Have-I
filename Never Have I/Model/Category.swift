@@ -22,10 +22,10 @@ struct Category: Codable, Equatable {
         //
         //            case .success(let categories):
         //
-        //                print("------------------------------------------------------")
-        //                print("Successfuly decoded categories from Firebase Database:")
-        //                print(categories)
-        //                print("------------------------------------------------------")
+//                        print("------------------------------------------------------")
+//                        print("Successfuly decoded categories from Firebase Database:")
+//                        print(categories)
+//                        print("------------------------------------------------------")
         //
         //                self.all = categories
         //                completion()
@@ -59,9 +59,12 @@ struct Category: Codable, Equatable {
             
             let categories = try JSONDecoder().decode([Category].self, from: jsonData)
             self.all = categories
+            
+            print("--------------------------------------------------------")
+            print("Successfuly decoded categories from the local json file:")
+            print("--------------------------------------------------------")
+            
             completion()
-            print(categories)
-            print(State.shared.getLanguageCode().rawValue)
             
         } catch {
             

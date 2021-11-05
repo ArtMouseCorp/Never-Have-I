@@ -2,6 +2,7 @@ import UIKit
 import Firebase
 import FirebaseMessaging
 import ApphudSDK
+import StoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -55,6 +56,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         
+    }
+    
+    func apphudShouldStartAppStoreDirectPurchase(_ product: SKProduct) -> ((ApphudPurchaseResult) -> Void) {
+        // manage your UI here, show a progress hud, etc.
+        let callback : ((ApphudPurchaseResult) -> Void) = { purchaseResult in
+            // check the result, hide a progress hud, etc.
+            if let subscription = purchaseResult.subscription, subscription.isActive() {
+
+                print("Purchase Success: \(product.productIdentifier)")
+                State.shared.isSubscribed = true
+                
+            }
+            
+        }
+        return callback
     }
     
 }

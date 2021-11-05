@@ -11,6 +11,7 @@ struct SubscriptionPage: Codable {
     let closeButtonDelay: Int
     let freeCards: Int
     let productId: String
+    let promotionalOfferId: String
     
     public static let `default` = SubscriptionPage(
         title: "NEVER HAVE I EVER",
@@ -20,12 +21,13 @@ struct SubscriptionPage: Codable {
             "HAD ACCESS TO THE BEST NEVER HAVE I EVER APP"
         ],
         subtitle: "NOW YOU CAN HAVE ALL THIS",
-        priceTitle: "FREE FOR %trial_period%\nthen %subscription_price% PER %subscription_period%",
+        priceTitle: "FREE FOR %trial_period%\nthen %subscription_price% / %subscription_period%",
         buttonTitle: "START FREE TRIAL",
         showCloseButton: true,
         closeButtonDelay: 2,
         freeCards: 2,
-        productId: "com.ua.artmouse.neverhavei.week"
+        productId: "com.ua.artmouse.neverhavei.week",
+        promotionalOfferId: "com.ua.artmouse.neverhavei.week.promo"
  
     )
     

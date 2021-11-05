@@ -43,6 +43,8 @@
 "alert.noCategoriesChoosen.title"       = "КАТЕГОРИИ НЕ ВЫБРАНЫ";
 "alert.noCategoriesChoosen.message"     = "Пожалуйста, выберите хотя бы одну категорию чтобы начать игру";
 
+"alert.loader.message"                  = "Минуточку...";
+
 // MARK: - Subscription
 
 "subscription.interval.day.one"         = "день";

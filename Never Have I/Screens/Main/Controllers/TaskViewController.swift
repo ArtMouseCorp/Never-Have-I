@@ -24,6 +24,7 @@ class TaskViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        StoreManager.updateStatus()
         self.loadTasks()
         self.subscriptionConfig = RCValues.sharedInstance.subscriptionPage()
         
@@ -91,14 +92,14 @@ extension TaskViewController: KolodaViewDelegate, KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
-//        if index == subscriptionConfig.freeCards && !State.shared.isSubscribed {
-//            let subscriptionViewController = SubscriptionViewController.load(from: Main.subscription)
-//            subscriptionViewController.modalPresentationStyle = .fullScreen
-//            subscriptionViewController.onCloseButtonPressed = {
-//                self.navigationController?.popViewController(animated: true)
-//            }
-//            self.present(subscriptionViewController, animated: true, completion: nil)
-//        }
+        if index == subscriptionConfig.freeCards && !State.shared.isSubscribed {
+            let subscriptionViewController = SubscriptionViewController.load(from: Main.subscription)
+            subscriptionViewController.modalPresentationStyle = .fullScreen
+            subscriptionViewController.onCloseButtonPressed = {
+                self.navigationController?.popViewController(animated: true)
+            }
+            self.present(subscriptionViewController, animated: true, completion: nil)
+        }
     }
    
     

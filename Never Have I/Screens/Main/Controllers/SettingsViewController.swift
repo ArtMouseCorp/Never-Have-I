@@ -61,13 +61,15 @@ class SettingsViewController: BaseViewController {
     
     @objc func termsOfUseViewTapped() {
         let infoViewController = InfoViewController.load(from: Main.info)
-        infoViewController.titleLabelText = localized("button.settings.termsOfUse")
+//        infoViewController.titleLabelText = localized("button.settings.termsOfUse")
+        infoViewController.initialize(for: .terms)
         self.present(infoViewController, animated: true)
     }
     
     @objc func privacyPolicyViewTapped() {
         let infoViewController = InfoViewController.load(from: Main.info)
-        infoViewController.titleLabelText = localized("button.settings.privacyPolicy")
+//        infoViewController.titleLabelText = localized("button.settings.privacyPolicy")
+        infoViewController.initialize(for: .privacy)
         self.present(infoViewController, animated: true)
     }
     
@@ -78,8 +80,23 @@ class SettingsViewController: BaseViewController {
             return
         }
         
-        StoreManager.restore {
-            self.dismiss(animated: true)
+        StoreManager.restore { isSubscribed, isRestored in
+            
+            if isSubscribed {
+                self.showAlreadySubscribedAlert()
+                return
+            }
+            
+            if isRestored {
+                self.showRestoredAlert()
+                return
+            }
+            
+            if !isRestored {
+                self.showNotSubscriberAlert()
+                return
+            }
+            
         }
         
     }

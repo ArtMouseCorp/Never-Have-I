@@ -71,9 +71,13 @@ struct StoreManager {
     }
 
     public static func purchase(_ product: Product, completion: (() -> ())? = nil) {
-
+        
+        topController().showLoader()
+        
         Apphud.purchase(product.apphudProduct) { purchaseResult in
 
+            topController().hideLoader()
+            
             if let subscription = purchaseResult.subscription, subscription.isActive() {
 
                 print("Purchase Success: \(product.id)")
@@ -85,28 +89,54 @@ struct StoreManager {
 
     }
 
-    public static func restore(completion: (() -> ())? = nil) {
+    public static func purchasePromo(_ product: Product, promoId: String, completion: (() -> ())? = nil) {
+        
+        // Checking eligibility for promotional offer
+        Apphud.checkEligibilityForPromotionalOffer(product: product.skProduct) { result in
+          if result {
+            // User is eligible to purchase promotional offer
+              
+              Apphud.purchasePromo(product.skProduct, discountID: promoId) { purchaseResult in
+                  
+                  if let subscription = purchaseResult.subscription, subscription.isActive() {
+
+                      print("Promotion Offer Purchase Success: \(promoId)")
+                      State.shared.isSubscribed = true
+                      completion?() ?? ()
+                  }
+                  
+              }
+              
+          }
+            
+        }
+        
+    }
+    
+    public static func restore(completion: ((_ isSubscribed: Bool, _ isRestored: Bool) -> ())? = nil) {
 
         self.updateStatus()
+        topController().showLoader()
 
         guard !State.shared.isSubscribed else {
-            topController().showAlreadySubscribedAlert()
+            topController().hideLoader()
+            completion?(true, false) ?? ()
             return
         }
 
         Apphud.restorePurchases{ subscriptions, purchases, error in
 
+            topController().hideLoader()
+            
             if Apphud.hasActiveSubscription() {
 
                 State.shared.isSubscribed = true
-                topController().showRestoredAlert() {
-                    completion?() ?? ()
-                }
+                completion?(false, true) ?? ()
 
             } else {
 
                 // no active subscription found, check non-renewing purchases or error
-                topController().showNotSubscriberAlert()
+                completion?(false, false) ?? ()
 
             }
         }

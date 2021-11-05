@@ -7,12 +7,12 @@ target 'Never Have I' do
   # Pods for Never Have I
   pod "Koloda"
   
-  pod 'GoogleUtilities'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Messaging'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Database'
-  pod 'Firebase/RemoteConfig'
+#  pod 'GoogleUtilities'
+#  pod 'Firebase/Analytics'
+#  pod 'Firebase/Messaging'
+#  pod 'Firebase/Crashlytics'
+#  pod 'Firebase/Database'
+#  pod 'Firebase/RemoteConfig'
   
   #  pod 'ApphudSDK'
   #
@@ -24,6 +24,6 @@ target 'FirebaseNotificationServiceExtension' do
   use_frameworks!
   
   # Pods for FirebaseNotificationServiceExtension
-  pod 'Firebase/Messaging'
+#  pod 'Firebase/Messaging'
   
 end

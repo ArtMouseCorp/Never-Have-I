@@ -43,6 +43,8 @@
 "alert.noCategoriesChoosen.title"       = "KEINE KATEGORIEN AUSGEWÄHLT";
 "alert.noCategoriesChoosen.message"     = "Bitte wählen Sie mindestens eine Kategorie, um das Spiel zu starten";
 
+"alert.loader.message"                  = "Bitte warten Sie...";
+
 // MARK: - Subscription
 
 "subscription.interval.day.one"         = "Tag";

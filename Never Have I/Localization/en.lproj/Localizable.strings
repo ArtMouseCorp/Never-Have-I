@@ -43,6 +43,8 @@
 "alert.noCategoriesChoosen.title"       = "NO CATEGORIES CHOOSEN";
 "alert.noCategoriesChoosen.message"     = "Please, choose at least one category to start the game";
 
+"alert.loader.message"                  = "Please wait...";
+
 // MARK: - Subscription
 
 "subscription.interval.day.one"         = "day";

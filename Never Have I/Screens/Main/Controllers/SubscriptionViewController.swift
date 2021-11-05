@@ -1,11 +1,12 @@
 import UIKit
+import StoreKit
 
 class SubscriptionViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     
     // Views
-    @IBOutlet var dotsView: [UIView]!
+    @IBOutlet var dotViews: [UIView]!
     
     // Labels
     @IBOutlet weak var neverHaveILabel: UILabel!
@@ -21,6 +22,9 @@ class SubscriptionViewController: BaseViewController {
     @IBOutlet weak var startFreeTrialButton: UIButton!
     @IBOutlet weak var restorePurchasesButton: UIButton!
         
+    // Image Views
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     // MARK: - Variables
     
     var onCloseButtonPressed: (()->()) = {}
@@ -56,8 +60,20 @@ class SubscriptionViewController: BaseViewController {
         
     }
     
+    override func setupGestures() {
+        let logoTap = UITapGestureRecognizer(target: self, action: #selector(handleCodeRedemption))
+        logoTap.numberOfTapsRequired = 3
+        logoImageView.isUserInteractionEnabled = true
+        logoImageView.addGestureRecognizer(logoTap)
+        
+//        let thirdDotTap = UITapGestureRecognizer(target: self, action: #selector(handlePromotionalOffer))
+//        thirdDotTap.numberOfTapsRequired = 6
+//        dotViews[2].isUserInteractionEnabled = true
+//        dotViews[2].addGestureRecognizer(thirdDotTap)
+    }
+    
     private func configureDots() {
-        for dotView in dotsView {
+        for dotView in dotViews {
             dotView.capsuleCorners()
         }
     }
@@ -114,6 +130,29 @@ class SubscriptionViewController: BaseViewController {
         }
         
     }
+    
+    // MARK: - Gesture actions
+    
+    @objc private func handleCodeRedemption() {
+        if #available(iOS 14.0, *) {
+            SKPaymentQueue().presentCodeRedemptionSheet()
+        }
+    }
+    
+    @objc private func handlePromotionalOffer() {
+        
+        guard let product = product else { return }
+        
+        guard isConnectedToNetwork() else {
+            self.showNetworkConnectionAlert()
+            return
+        }
+        
+        StoreManager.purchasePromo(product, promoId: pageConfig.promotionalOfferId) {
+            self.dismiss(animated: true)
+        }
+        
+    }
         
     // MARK: - @IBActions
     
@@ -123,8 +162,6 @@ class SubscriptionViewController: BaseViewController {
     }
     
     @IBAction func startFreeTrialButtonPressed(_ sender: Any) {
-        
-        print("Subscribe")
         
         guard let product = product else {
             self.dismiss(animated: true)
@@ -149,8 +186,28 @@ class SubscriptionViewController: BaseViewController {
             return
         }
         
-        StoreManager.restore {
-            self.dismiss(animated: true)
+        StoreManager.restore { isSubscribed, isRestored in
+            
+            if isSubscribed {
+                self.showAlreadySubscribedAlert() {
+                    StoreManager.updateStatus()
+                    self.dismiss(animated: true)
+                }
+                return
+            }
+            
+            if isRestored {
+                self.showRestoredAlert() {
+                    self.dismiss(animated: true)
+                }
+                return
+            }
+            
+            if !isRestored {
+                self.showNotSubscriberAlert()
+                return
+            }
+            
         }
         
     }

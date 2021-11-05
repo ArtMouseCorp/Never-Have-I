@@ -15,6 +15,7 @@ enum RCValueKey: String {
         case closeButtonDelay
         case freeCards
         case productId
+        case promotionalOfferId
     }
 
 }
@@ -85,7 +86,8 @@ class RCValues {
             showCloseButton:    json[RCValueKey.SubscriptionPage.showCloseButton.rawValue].boolValue,
             closeButtonDelay:   json[RCValueKey.SubscriptionPage.closeButtonDelay.rawValue].intValue,
             freeCards:          json[RCValueKey.SubscriptionPage.freeCards.rawValue].intValue,
-            productId:          json[RCValueKey.SubscriptionPage.productId.rawValue].stringValue
+            productId:          json[RCValueKey.SubscriptionPage.productId.rawValue].stringValue,
+            promotionalOfferId: json[RCValueKey.SubscriptionPage.promotionalOfferId.rawValue].stringValue
         )
         
         return subPage
