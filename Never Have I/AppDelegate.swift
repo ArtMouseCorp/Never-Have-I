@@ -3,6 +3,7 @@ import Firebase
 import FirebaseMessaging
 import ApphudSDK
 import StoreKit
+import FacebookCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.integrateFirebase()
         self.integrateFirebaseMessaging(for: application)
         self.integrateApphud()
+        self.integrateFacebook(for: application, with: launchOptions)
         
         // Fetch data
         
@@ -24,6 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ = RCValues.sharedInstance
         
         return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
     }
     
     // MARK: - Services integration functions
@@ -47,6 +59,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Apphud.start(apiKey: Config.Apphud.apiKey)
     }
     
+    private func integrateFacebook(for application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
+    }
+    
     // MARK: - UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -63,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let callback : ((ApphudPurchaseResult) -> Void) = { purchaseResult in
             // check the result, hide a progress hud, etc.
             if let subscription = purchaseResult.subscription, subscription.isActive() {
-
+                
                 print("Purchase Success: \(product.productIdentifier)")
                 State.shared.isSubscribed = true
                 

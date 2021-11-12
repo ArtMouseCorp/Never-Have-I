@@ -44,6 +44,7 @@
 		286D33652704B55700E6761E /* LanguagePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33642704B55700E6761E /* LanguagePopupViewController.swift */; };
 		2889657D272956860002B10C /* categories_de.json in Resources */ = {isa = PBXBuildFile; fileRef = 2889657C272956860002B10C /* categories_de.json */; };
 		2889657F272966770002B10C /* categories_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2889657E272966770002B10C /* categories_fr.json */; };
+		28B01ED0273EBD6D00612156 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 28B01ECF273EBD6D00612156 /* FacebookCore */; };
 		28F330EB2735261C001D025D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F330EA2735261C001D025D /* StoreKit.framework */; };
 		28F330ED27353369001D025D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F330EC27353369001D025D /* String.swift */; };
 		28F330F027353C14001D025D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 28F330EF27353C14001D025D /* FirebaseAnalytics */; };
@@ -192,6 +193,7 @@
 				28F330F227353C14001D025D /* FirebaseCrashlytics in Frameworks */,
 				28F330F027353C14001D025D /* FirebaseAnalytics in Frameworks */,
 				C3A6055F068FA2793836E459 /* Pods_Never_Have_I.framework in Frameworks */,
+				28B01ED0273EBD6D00612156 /* FacebookCore in Frameworks */,
 				28F330F827353C14001D025D /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +505,7 @@
 				28F330F327353C14001D025D /* FirebaseDatabase */,
 				28F330F527353C14001D025D /* FirebaseMessaging */,
 				28F330F727353C14001D025D /* FirebaseRemoteConfig */,
+				28B01ECF273EBD6D00612156 /* FacebookCore */,
 			);
 			productName = "Never Have I";
 			productReference = 4A3ECF182704A3D100487902 /* Never Have I.app */;
@@ -540,6 +543,7 @@
 			packageReferences = (
 				280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
 				28F330EE27353C14001D025D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				28B01ECE273EBD6D00612156 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 4A3ECF192704A3D100487902 /* Products */;
 			projectDirPath = "";
@@ -782,7 +786,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -810,7 +814,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -955,6 +959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -979,6 +984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1027,6 +1033,14 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		28B01ECE273EBD6D00612156 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		28F330EE27353C14001D025D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1042,6 +1056,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
 			productName = ApphudSDK;
+		};
+		28B01ECF273EBD6D00612156 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28B01ECE273EBD6D00612156 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
 		};
 		28F330EF27353C14001D025D /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
