@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,13 +28,19 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<false/>
+	<true/>
+	<key>FacebookAdvertiserTrackingEnabled</key>
+	<true/>
 	<key>FacebookAppID</key>
 	<string>915126639129058</string>
 	<key>FacebookAutoLogAppEventsEnabled</key>
 	<true/>
+	<key>FacebookClientToken</key>
+	<string>5278fb15d6d3aa7fff2a25242647d760</string>
 	<key>FacebookDisplayName</key>
 	<string>Never Have I - Party Game</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

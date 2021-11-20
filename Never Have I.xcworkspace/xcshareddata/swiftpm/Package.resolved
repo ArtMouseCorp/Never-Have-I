@@ -32,9 +32,9 @@
         "package": "Facebook",
         "repositoryURL": "https://github.com/facebook/facebook-ios-sdk",
         "state": {
-          "branch": null,
-          "revision": "c3d367656ae8ced1149c2c6a5e6b5dd91ecad63c",
-          "version": "9.3.0"
+          "branch": "main",
+          "revision": "be11dafe500710c4093ff241658099b83717e5b2",
+          "version": null
         }
       },
       {

@@ -4,6 +4,7 @@ import FirebaseMessaging
 import ApphudSDK
 import StoreKit
 import FacebookCore
+import FacebookAEM
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,12 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        ApplicationDelegate.shared.application(
+        
+        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
+        AEMReporter.enable()
+        AEMReporter.handle(url)
+        
+        return ApplicationDelegate.shared.application(
             app,
             open: url,
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.shared.activateApp()
     }
     
     // MARK: - Services integration functions
@@ -60,10 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func integrateFacebook(for application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        ApplicationDelegate.shared.application(
-            application,
-            didFinishLaunchingWithOptions: launchOptions
-        )
+        Settings.shared.isAdvertiserTrackingEnabled = true
+        Settings.shared.isAutoLogAppEventsEnabled = true
+        Settings.shared.isAdvertiserIDCollectionEnabled = true
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     // MARK: - UISceneSession Lifecycle

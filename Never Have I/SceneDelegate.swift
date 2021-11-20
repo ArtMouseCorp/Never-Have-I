@@ -1,5 +1,6 @@
 import UIKit
-import FacebookCore
+import FBSDKCoreKit
+import FacebookAEM
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -22,6 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let url = URLContexts.first?.url else {
             return
         }
+        
+        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
+        AEMReporter.enable()
+        AEMReporter.handle(url)
         
         ApplicationDelegate.shared.application(
             UIApplication.shared,
