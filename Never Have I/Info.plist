@@ -21,22 +21,14 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb915126639129058</string>
+				<string>fb300696808586130</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<true/>
-	<key>FacebookAdvertiserTrackingEnabled</key>
-	<true/>
 	<key>FacebookAppID</key>
-	<string>915126639129058</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookClientToken</key>
-	<string>5278fb15d6d3aa7fff2a25242647d760</string>
+	<string>300696808586130</string>
 	<key>FacebookDisplayName</key>
 	<string>Never Have I - Party Game</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -55,12 +47,15 @@
 		<string>fbapi20150629</string>
 		<string>fbapi20160328</string>
 		<string>fbauth</string>
+		<string>fb-messenger-api</string>
 		<string>fb-messenger-share-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Your data will be used to create a customized experience tailored to your interests</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Oswald-SemiBold</string>
@@ -103,6 +98,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

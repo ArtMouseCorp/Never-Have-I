@@ -21,8 +21,10 @@
 		2822D5FE272355F4003EA8BC /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2822D5FC272355F4003EA8BC /* Oswald-Medium.ttf */; };
 		2822D601272355FC003EA8BC /* categories_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2822D5FF272355FC003EA8BC /* categories_en.json */; };
 		2822D602272355FC003EA8BC /* categories_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 2822D600272355FC003EA8BC /* categories_ru.json */; };
-		282BCE972748F3DE00B12A6F /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 282BCE962748F3DE00B12A6F /* FacebookCore */; };
-		282BCE9E274953BD00B12A6F /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 282BCE9D274953BD00B12A6F /* FacebookAEM */; };
+		2850E5922751311900F2200C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2850E5942751311900F2200C /* InfoPlist.strings */; };
+		2850E59A275135DF00F2200C /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 2850E599275135DF00F2200C /* FacebookAEM */; };
+		2850E59C275135DF00F2200C /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 2850E59B275135DF00F2200C /* FacebookBasics */; };
+		2850E59E275135DF00F2200C /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2850E59D275135DF00F2200C /* FacebookCore */; };
 		286D333C2704B18C00E6761E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33332704B18C00E6761E /* UIColor.swift */; };
 		286D333D2704B18C00E6761E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33342704B18C00E6761E /* UIView.swift */; };
 		286D333E2704B18C00E6761E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D33352704B18C00E6761E /* UIFont.swift */; };
@@ -114,6 +116,10 @@
 		2822D5FC272355F4003EA8BC /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		2822D5FF272355FC003EA8BC /* categories_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories_en.json; sourceTree = "<group>"; };
 		2822D600272355FC003EA8BC /* categories_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories_ru.json; sourceTree = "<group>"; };
+		2850E5932751311900F2200C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2850E5952751311D00F2200C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2850E5962751312400F2200C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2850E5972751313A00F2200C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		286D33332704B18C00E6761E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		286D33342704B18C00E6761E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		286D33352704B18C00E6761E /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -187,15 +193,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2850E59A275135DF00F2200C /* FacebookAEM in Frameworks */,
 				28F330F427353C14001D025D /* FirebaseDatabase in Frameworks */,
 				28F330EB2735261C001D025D /* StoreKit.framework in Frameworks */,
 				28F330F627353C14001D025D /* FirebaseMessaging in Frameworks */,
+				2850E59E275135DF00F2200C /* FacebookCore in Frameworks */,
 				280B13A32725CD9F0099EC15 /* ApphudSDK in Frameworks */,
 				28F330F227353C14001D025D /* FirebaseCrashlytics in Frameworks */,
 				28F330F027353C14001D025D /* FirebaseAnalytics in Frameworks */,
-				282BCE9E274953BD00B12A6F /* FacebookAEM in Frameworks */,
+				2850E59C275135DF00F2200C /* FacebookBasics in Frameworks */,
 				C3A6055F068FA2793836E459 /* Pods_Never_Have_I.framework in Frameworks */,
-				282BCE972748F3DE00B12A6F /* FacebookCore in Frameworks */,
 				28F330F827353C14001D025D /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				286D334E2704B25C00E6761E /* Localizable.strings */,
+				2850E5942751311900F2200C /* InfoPlist.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -507,8 +515,9 @@
 				28F330F327353C14001D025D /* FirebaseDatabase */,
 				28F330F527353C14001D025D /* FirebaseMessaging */,
 				28F330F727353C14001D025D /* FirebaseRemoteConfig */,
-				282BCE962748F3DE00B12A6F /* FacebookCore */,
-				282BCE9D274953BD00B12A6F /* FacebookAEM */,
+				2850E599275135DF00F2200C /* FacebookAEM */,
+				2850E59B275135DF00F2200C /* FacebookBasics */,
+				2850E59D275135DF00F2200C /* FacebookCore */,
 			);
 			productName = "Never Have I";
 			productReference = 4A3ECF182704A3D100487902 /* Never Have I.app */;
@@ -546,7 +555,7 @@
 			packageReferences = (
 				280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
 				28F330EE27353C14001D025D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				282BCE952748F3DE00B12A6F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				2850E598275135DE00F2200C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 4A3ECF192704A3D100487902 /* Products */;
 			projectDirPath = "";
@@ -571,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2889657D272956860002B10C /* categories_de.json in Resources */,
+				2850E5922751311900F2200C /* InfoPlist.strings in Resources */,
 				4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */,
 				2822D5FD272355F4003EA8BC /* Oswald-SemiBold.ttf in Resources */,
 				280B13A52725CE200099EC15 /* GoogleService-Info.plist in Resources */,
@@ -738,6 +748,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2850E5942751311900F2200C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2850E5932751311900F2200C /* en */,
+				2850E5952751311D00F2200C /* de */,
+				2850E5962751312400F2200C /* fr */,
+				2850E5972751313A00F2200C /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		286D334E2704B25C00E6761E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -789,7 +810,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -817,7 +838,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i.FirebaseNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -883,6 +904,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -938,6 +960,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -962,7 +985,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -987,7 +1010,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ua.artmouse.never-have-i";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1036,7 +1059,7 @@
 				minimumVersion = 2.4.0;
 			};
 		};
-		282BCE952748F3DE00B12A6F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+		2850E598275135DE00F2200C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
 			requirement = {
@@ -1060,15 +1083,20 @@
 			package = 280B13A12725CD9F0099EC15 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
 			productName = ApphudSDK;
 		};
-		282BCE962748F3DE00B12A6F /* FacebookCore */ = {
+		2850E599275135DF00F2200C /* FacebookAEM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 282BCE952748F3DE00B12A6F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
-		282BCE9D274953BD00B12A6F /* FacebookAEM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 282BCE952748F3DE00B12A6F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 2850E598275135DE00F2200C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookAEM;
+		};
+		2850E59B275135DF00F2200C /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2850E598275135DE00F2200C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		2850E59D275135DF00F2200C /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2850E598275135DE00F2200C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
 		};
 		28F330EF27353C14001D025D /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
+        AEMReporter.configure(withNetworker: nil, appID: "300696808586130")
         AEMReporter.enable()
         AEMReporter.handle(url)
         

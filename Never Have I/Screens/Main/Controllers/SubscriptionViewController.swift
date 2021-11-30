@@ -96,7 +96,7 @@ class SubscriptionViewController: BaseViewController {
             return
         }
         
-        let productId = pageConfig.productId
+        let productId = "com.ua.artmouse.neverhavei.day"//pageConfig.productId
         
         StoreManager.getProducts(for: [productId]) { products in
             

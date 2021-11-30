@@ -5,6 +5,8 @@ import ApphudSDK
 import StoreKit
 import FacebookCore
 import FacebookAEM
+import AppTrackingTransparency
+import AdSupport
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,10 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
+        AEMReporter.configure(withNetworker: nil, appID: "300696808586130")
         AEMReporter.enable()
         AEMReporter.handle(url)
         
@@ -67,14 +68,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func integrateApphud() {
         Apphud.enableDebugLogs()
         Apphud.start(apiKey: Config.Apphud.apiKey)
+        
+        if #available(iOS 14.5, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                guard status == .authorized else {return}
+                let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                Apphud.setAdvertisingIdentifier(idfa)
+            }
+        }
     }
     
     private func integrateFacebook(for application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        
         Settings.shared.isAdvertiserTrackingEnabled = true
         Settings.shared.isAutoLogAppEventsEnabled = true
         Settings.shared.isAdvertiserIDCollectionEnabled = true
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        Apphud.addAttribution(data: [:], from: .facebook, callback: nil)
     }
     
     // MARK: - UISceneSession Lifecycle
