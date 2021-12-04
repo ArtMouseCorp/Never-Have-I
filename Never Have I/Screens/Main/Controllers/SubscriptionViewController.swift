@@ -57,7 +57,7 @@ class SubscriptionViewController: BaseViewController {
         secondOfferLabel.text = pageConfig.reasons[1]
         thirdOfferLabel.text = pageConfig.reasons[2]
         hadAccessLabel.text = pageConfig.subtitle
-        
+        startFreeTrialButton.setTitle(pageConfig.buttonTitle, for: .normal)
     }
     
     override func setupGestures() {

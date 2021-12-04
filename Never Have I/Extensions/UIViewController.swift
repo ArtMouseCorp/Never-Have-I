@@ -60,8 +60,8 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func hideLoader() {
-        dismiss(animated: false, completion: nil)
+    func hideLoader(completion: (() -> ())? = nil) {
+        dismiss(animated: false, completion: completion)
     }
 }
 

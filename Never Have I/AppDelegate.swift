@@ -5,6 +5,8 @@ import ApphudSDK
 import StoreKit
 import FacebookCore
 import FacebookAEM
+import AppTrackingTransparency
+import AdSupport
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,10 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
+        AEMReporter.configure(withNetworker: nil, appID: "300696808586130")
         AEMReporter.enable()
         AEMReporter.handle(url)
         
@@ -44,8 +45,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
     }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {
+    @objc private func applicationDidBecomeActive() {
         AppEvents.shared.activateApp()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.requestTrackingAuthorization()
+        }
+    }
+    
+    // MARK: - Custom functions
+    
+    private func requestTrackingAuthorization() {
+        if #available(iOS 14.5, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                switch status {
+                case .authorized:
+                    // Tracking authorization dialog was shown
+                    // and we are authorized
+                    print("Authorized")
+                    let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                    Apphud.setAdvertisingIdentifier(idfa)
+                case .denied:
+                    // Tracking authorization dialog was
+                    // shown and permission is denied
+                    print("Denied")
+                case .notDetermined:
+                    // Tracking authorization dialog has not been shown
+                    print("Not Determined")
+                case .restricted:
+                    print("Restricted")
+                @unknown default:
+                    ()
+                }
+            })
+        }
     }
     
     // MARK: - Services integration functions
@@ -67,14 +100,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func integrateApphud() {
         Apphud.enableDebugLogs()
         Apphud.start(apiKey: Config.Apphud.apiKey)
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("applicationDidBecomeActive"), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     private func integrateFacebook(for application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        
         Settings.shared.isAdvertiserTrackingEnabled = true
         Settings.shared.isAutoLogAppEventsEnabled = true
         Settings.shared.isAdvertiserIDCollectionEnabled = true
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        Apphud.addAttribution(data: [:], from: .facebook, callback: nil)
     }
     
     // MARK: - UISceneSession Lifecycle
