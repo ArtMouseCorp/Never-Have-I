@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2809EAB5275BBF0F00E074FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2809EAB7275BBF0F00E074FA /* InfoPlist.strings */; };
 		280B13972725BF560099EC15 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B13962725BF560099EC15 /* Config.swift */; };
 		280B13A32725CD9F0099EC15 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 280B13A22725CD9F0099EC15 /* ApphudSDK */; };
 		280B13A52725CE200099EC15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 280B13A42725CE200099EC15 /* GoogleService-Info.plist */; };
@@ -100,6 +101,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2809EAB6275BBF0F00E074FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2809EAB8275BBF1000E074FA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2809EAB9275BBF1100E074FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2809EABA275BBF1100E074FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		280B13962725BF560099EC15 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		280B13A42725CE200099EC15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		280B13AA2725CEA60099EC15 /* FirebaseNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FirebaseNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				286D334E2704B25C00E6761E /* Localizable.strings */,
+				2809EAB7275BBF0F00E074FA /* InfoPlist.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2889657D272956860002B10C /* categories_de.json in Resources */,
+				2809EAB5275BBF0F00E074FA /* InfoPlist.strings in Resources */,
 				4A3ECF282704A3D400487902 /* LaunchScreen.storyboard in Resources */,
 				2822D5FD272355F4003EA8BC /* Oswald-SemiBold.ttf in Resources */,
 				280B13A52725CE200099EC15 /* GoogleService-Info.plist in Resources */,
@@ -738,6 +745,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2809EAB7275BBF0F00E074FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2809EAB6275BBF0F00E074FA /* en */,
+				2809EAB8275BBF1000E074FA /* fr */,
+				2809EAB9275BBF1100E074FA /* de */,
+				2809EABA275BBF1100E074FA /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		286D334E2704B25C00E6761E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -777,7 +795,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseNotificationServiceExtension/Info.plist;
@@ -805,7 +823,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseNotificationServiceExtension/Info.plist;
@@ -954,6 +972,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Never Have I/Never Have I.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				INFOPLIST_FILE = "Never Have I/Info.plist";
@@ -979,6 +998,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Never Have I/Never Have I.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 95G2CDLKC7;
 				INFOPLIST_FILE = "Never Have I/Info.plist";
