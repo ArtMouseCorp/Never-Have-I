@@ -1,6 +1,7 @@
 import UIKit
 
 struct Language {
+    
     var name: String
     var image: UIImage
     let code: Code
@@ -13,14 +14,12 @@ struct Language {
     
     public enum Code: String, Codable {
         case en = "en",
-             ru = "ru",
              fr = "fr",
              de = "de"
         
         init(_ value: String) {
             switch value.lowercased() {
             case "en": self = .en
-            case "ru", "ua": self = .ru
             case "fr": self = .fr
             case "de": self = .de
             default: self = .en
@@ -30,12 +29,13 @@ struct Language {
         public func getLanguage() -> Language {
             return (Language.languages.first { $0.code == self })!
         }
+        
     }
     
     public static var languages = [
-        Language(name: "ENGLISH",   image: UIImage(named: "UK")!,        code: Code.en),
-        Language(name: "РУССКИЙ",   image: UIImage(named: "Russia")!,    code: Code.ru),
-        Language(name: "FRANÇAIS",  image: UIImage(named: "France")!,    code: Code.fr),
-        Language(name: "DEUTSCH",   image: UIImage(named: "Germany")!,   code: Code.de)
+        Language(name: "ENGLISH",       image: UIImage(named: "UK")!,        code: Code.en),
+        Language(name: "FRANÇAIS",      image: UIImage(named: "France")!,    code: Code.fr),
+        Language(name: "DEUTSCH",       image: UIImage(named: "Germany")!,   code: Code.de)
     ]
+    
 }

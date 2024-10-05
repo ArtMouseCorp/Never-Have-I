@@ -17,7 +17,7 @@ struct DatabaseManager {
             }
             
             
-            guard let array = dataSnapshot.value as? NSArray else {
+            guard let array = dataSnapshot?.value as? NSArray else {
                 completion(.failure(DatabaseError(error: nil, description: "Not an array")))
                 return
             }

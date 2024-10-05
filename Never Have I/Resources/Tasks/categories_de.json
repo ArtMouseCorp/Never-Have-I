@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "POPULÄRE",
+        "name": "Populäre",
         "tasks": [
             "(Ich habe noch nie) \"aufgeräumt\", indem ich alles in einen Schrank stapele",
             "(Ich habe noch nie) meine Baby-Mama verlassen",
@@ -845,7 +845,7 @@
     },
     {
         "id": 1,
-        "name": "DIRTY & SEX",
+        "name": "Dirty & Sex",
         "tasks": [
             "(Ich habe noch nie) einer sexuellen Position zugestimmt, ohne zu wissen, was es ist",
             "(Ich habe noch nie) einen Freund gebeten, mich auf eine Geschlechtskrankheit zu untersuchen",
@@ -1267,7 +1267,7 @@
     },
     {
         "id": 2,
-        "name": "PARTY",
+        "name": "Party",
         "tasks": [
             "(Ich habe noch nie) jemanden gebeten, mir einen Drink zu kaufen",
             "(Ich habe noch nie) jemanden gebeten, mir Alkohol zu kaufen, wenn ich minderjährig bin",
@@ -1392,7 +1392,7 @@
     },
     {
         "id": 3,
-        "name": "BEZIEHUNGEN",
+        "name": "Beziehungen",
         "tasks": [
             "(Ich habe noch nie) jemandem geraten, seinen Partner zu verlassen",
             "(Ich habe noch nie) nach der Telefonnummer von jemandem gefragt",
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 4,
-        "name": "SCHULE & ARBEIT",
+        "name": "Karriere",
         "tasks": [
             "(Ich habe noch nie) so getan, als würde ich eine Fremdsprache fließend sprechen",
             "(Ich habe noch nie) um eine Gehaltserhöhung gebeten",

@@ -1,0 +1,64 @@
+
+// MARK: - Main Screen
+
+"button.main.play"                      = "ГРАТИ";
+
+// MARK: - Settings Screen
+
+"button.settings.language"              = "МОВА";
+"button.settings.termsOfUse"            = "УМОВИ ВИКОРИСТАННЯ";
+"button.settings.privacyPolicy"         = "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ";
+"button.settings.restorePurchases"      = "ВІДНОВИТИ ПІДПИСКУ";
+
+// MARK: - Cards Screen
+
+"button.game.next"                      = "НАСТУПНА";
+"game.nhie"                             = "Я НІКОЛИ НЕ";
+
+// MARK: - Game Over
+
+"gameover.playMoreCards"                = "СПРОБУЙТЕ ІНШІ КАТЕГОРІЇ";
+"button.gameover.playAgain"             = "ГРАТИ ЗНОВУ";
+"button.gameover.rateUs"                = "ОЦІНИТИ НАС";
+
+// MARK: - Language Popup
+
+"button.language.select"                = "ОБРАТИ";
+"button.language.cancel"                = "ВІДМІНА";
+
+// MARK: - Alerts
+
+"alert.noConnection.title"              = "ВІДСУТНЄ ІНТЕРНЕТ ЗʼЄДНАННЯ";
+"alert.noConnection.message"            = "Відсутнє інтернет-з'єднання. Будь ласка, підключіться до мережі та спробуйте знову";
+
+"alert.subscribed.title"                = "ВИ ПІДПИСАНІ";
+"alert.subscribed.message"              = "Ви вже підписані. Вам доступний весь функціонал";
+
+"alert.restored.title"                  = "ВІДНОВЛЕНО";
+"alert.restored.message"                = "Ви успішно відновили свою підписку. Усі функції тепер доступні для вас";
+
+"alert.notSubscriber.title"             = "НЕ МОЖЛИВО ВІДНОВИТИ";
+"alert.notSubscriber.message"           = "Вибачте, ви не можете відновити вашу покупку, оскільки у вас немає активної підписки";
+
+"alert.noCategoriesChoosen.title"       = "КАТЕГОРІЇ НЕ ОБРАНІ";
+"alert.noCategoriesChoosen.message"     = "Будь ласка, виберіть хоча б одну категорію щоб почати гру";
+
+"alert.loader.message"                  = "Хвилиночку...";
+
+// MARK: - Subscription
+
+"subscription.interval.day.one"         = "день";
+"subscription.interval.day.two"         = "дня";
+"subscription.interval.day.five"        = "днів";
+"subscription.interval.week.one"        = "тиждень";
+"subscription.interval.week.two"        = "тижні";
+"subscription.interval.week.five"       = "тижнів";
+"subscription.interval.month.one"       = "місяць";
+"subscription.interval.month.two"       = "місяці";
+"subscription.interval.month.five"      = "місяців";
+"subscription.interval.year.one"        = "рік";
+"subscription.interval.year.two"        = "роки";
+"subscription.interval.year.five"       = "років";
+
+"button.subscription.restore"           = "ВІДНОВИТИ ПІДПИСКУ";
+"subscription.cancelInfo"               = "ВІДМІНА В БУДЬ-ЯКИЙ ЧАС";

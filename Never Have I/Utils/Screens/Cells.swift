@@ -2,7 +2,7 @@ import UIKit
 
 public enum Cell: String {
     
-    case categoryCell = "CategoryTableViewCell"
+    case categoryCell = "CategoryCollectionViewCell"
     case languageCell = "LanguageTableViewCell"
     
 }

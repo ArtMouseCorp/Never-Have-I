@@ -1,6 +1,4 @@
 import UIKit
-import FBSDKCoreKit
-import FacebookAEM
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -24,16 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        AEMReporter.configure(withNetworker: nil, appID: "915126639129058")
-        AEMReporter.enable()
-        AEMReporter.handle(url)
-        
-        ApplicationDelegate.shared.application(
-            UIApplication.shared,
-            open: url,
-            sourceApplication: nil,
-            annotation: [UIApplication.OpenURLOptionsKey.annotation]
-        )
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -76,4 +64,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
  //     \{o o}/
  //      =\o/=
  //       ^ ^
- */
+*/

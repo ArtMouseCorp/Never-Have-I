@@ -1,12 +1,10 @@
 import UIKit
-import Firebase
-import FirebaseMessaging
-import ApphudSDK
 import StoreKit
-import FacebookCore
-import FacebookAEM
-import AppTrackingTransparency
+import Firebase
 import AdSupport
+import ApphudSDK
+import FirebaseMessaging
+import AppTrackingTransparency
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.integrateFirebase()
         self.integrateFirebaseMessaging(for: application)
         self.integrateApphud()
-        self.integrateFacebook(for: application, with: launchOptions)
         
         // Fetch data
         
@@ -31,23 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        AEMReporter.configure(withNetworker: nil, appID: "300696808586130")
-        AEMReporter.enable()
-        AEMReporter.handle(url)
-        
-        return ApplicationDelegate.shared.application(
-            app,
-            open: url,
-            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-        )
-    }
-    
     @objc private func applicationDidBecomeActive() {
-        AppEvents.shared.activateApp()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.requestTrackingAuthorization()
         }
@@ -101,17 +82,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Apphud.enableDebugLogs()
         Apphud.start(apiKey: Config.Apphud.apiKey)
         NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("applicationDidBecomeActive"), name: UIApplication.didBecomeActiveNotification, object: nil)
-    }
-    
-    private func integrateFacebook(for application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        
-        Settings.shared.isAdvertiserTrackingEnabled = true
-        Settings.shared.isAutoLogAppEventsEnabled = true
-        Settings.shared.isAdvertiserIDCollectionEnabled = true
-        
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        Apphud.addAttribution(data: [:], from: .facebook, callback: nil)
     }
     
     // MARK: - UISceneSession Lifecycle
@@ -203,4 +173,4 @@ extension AppDelegate: MessagingDelegate {
  //     \{o o}/
  //      =\o/=
  //       ^ ^
- */
+*/

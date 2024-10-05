@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "POPULAR",
+        "name": "Popular",
         "tasks": [
             "(Never have I ever) 'cleaned up' by piling everything into a closet",
             "(Never have I ever) abandoned my baby mama",
@@ -845,7 +845,7 @@
     },
     {
         "id": 1,
-        "name": "DIRTY & SEX",
+        "name": "Dirty & Sex",
         "tasks": [
             "(Never have I ever) agreed to a sexual position without knowing what it is",
             "(Never have I ever) asked a friend to check me for an STD",
@@ -1267,7 +1267,7 @@
     },
     {
         "id": 2,
-        "name": "PARTY",
+        "name": "Party",
         "tasks": [
             "(Never have I ever) asked someone to buy me a drink",
             "(Never have I ever) asked someone to buy me alcohol when underage",
@@ -1392,7 +1392,7 @@
     },
     {
         "id": 3,
-        "name": "RELATIONSHIP",
+        "name": "Couple",
         "tasks": [
             "(Never have I ever) advised someone to leave their partner",
             "(Never have I ever) asked for someone's phone number",
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 4,
-        "name": "SCHOOL & WORK",
+        "name": "Career",
         "tasks": [
             "(Never have I ever) acted like I fluently speak a foreign language",
             "(Never have I ever) asked for a raise",

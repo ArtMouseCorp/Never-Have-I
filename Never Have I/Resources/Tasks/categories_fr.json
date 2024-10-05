@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "POPULAIRE",
+        "name": "Populaire",
         "tasks": [
             "(Je n'ai jamais) \"nettoyé\" en empilant tout dans un placard",
             "(Je n'ai jamais) abandonné mon bébé maman",
@@ -845,7 +845,7 @@
     },
     {
         "id": 1,
-        "name": "SALE & SEXE",
+        "name": "Sale & Sexe",
         "tasks": [
             "(Je n'ai jamais) accepté une position sexuelle sans savoir ce que c'est",
             "(Je n'ai jamais) demandé à un ami de me vérifier pour une MST",
@@ -1267,7 +1267,7 @@
     },
     {
         "id": 2,
-        "name": "FÊTE",
+        "name": "Fête",
         "tasks": [
             "(Je n'ai jamais) demandé à quelqu'un de m'offrir un verre",
             "(Je n'ai jamais) demandé à quelqu'un de m'acheter de l'alcool quand j'étais mineur",
@@ -1392,7 +1392,7 @@
     },
     {
         "id": 3,
-        "name": "RELATION AMOUREUSE",
+        "name": "Relation Amoureuse",
         "tasks": [
             "(Je n'ai jamais) conseillé à quelqu'un de quitter son partenaire",
             "(Je n'ai jamais) demandé le numéro de téléphone de quelqu'un",
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 4,
-        "name": "ÉCOLE & TRAVAIL",
+        "name": "Carrière",
         "tasks": [
             "(Je n'ai jamais) agi comme si je parlais couramment une langue étrangère",
             "(Je n'ai jamais) demandé une augmentation",

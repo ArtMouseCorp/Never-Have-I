@@ -4,43 +4,22 @@ class CategoryViewController: BaseViewController {
     
     // MARK: - @IBOutlets
     
-    // Views
     @IBOutlet weak var playView: NHEButtonView!
-    
-    // Labels
     @IBOutlet weak var playLabel: UILabel!
-    
-    // Buttons
     @IBOutlet weak var menuButton: UIButton!
-    
-    // Table Views
-    @IBOutlet weak var tableView: UITableView!
-    
-    // Constraints
-    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-    
-    // MARK: - Variables
-    
-    var isViewDidLayoutSubviews: Bool = false
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Awake functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.configure(tableView)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        guard !isViewDidLayoutSubviews else { return }
-        self.tableViewHeightConstraint.constant = self.tableView.contentHeight
-        self.tableViewHeightConstraint.constant = self.tableView.contentHeight
-        isViewDidLayoutSubviews = true
+        super.configure(collectionView, with: Cell.categoryCell)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         State.shared.selectedCategories.removeAll()
-        tableView.reloadData()
+        collectionView.reloadData()
     }
     
     // MARK: - Custom functions
@@ -81,34 +60,53 @@ class CategoryViewController: BaseViewController {
     }
 }
 
-// MARK: - UITableViewDelegate, UITableViewDataSource
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
-extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Category.all.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.categoryCell.id, for: indexPath) as! CategoryTableViewCell
-        
-        cell.titleLabel.text = Category.all[indexPath.row].name.uppercased()
-        cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.categoryCell.id, for: indexPath) as! CategoryCollectionViewCell
+        cell.widthConstraint.constant = (UIScreen.main.bounds.width - 70) / 2
+        cell.categoryTitleLabel.text = Category.all[indexPath.row].name
+        cell.categoryBackgroundImageView.image = UIImage(named: "category-\(indexPath.row)") ?? UIImage()
+        cell.categoryIndicatorImageView.image = UIImage(named: "category-deselected") ?? UIImage()
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! CategoryTableViewCell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
         let category = Category.all[indexPath.row]
         
         if let index = State.shared.selectedCategories.firstIndex(of: category) {
             State.shared.selectedCategories.remove(at: index)
-            cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+            cell.categoryIndicatorImageView.image = UIImage(named: "category-deselected") ?? UIImage()
         } else {
             State.shared.selectedCategories.append(category)
-            cell.checkmarkView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.categoryIndicatorImageView.image = UIImage(named: "category-selected") ?? UIImage()
         }
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 70) / 2
+        let height = (width / 181) * 152
+        return CGSize(width: width, height: height)
     }
     
 }
@@ -122,4 +120,4 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
  //     \{o o}/
  //      =\o/=
  //       ^ ^
- */
+*/

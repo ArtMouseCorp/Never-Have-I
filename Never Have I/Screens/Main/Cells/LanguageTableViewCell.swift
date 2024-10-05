@@ -9,9 +9,7 @@ class LanguageTableViewCell: UITableViewCell {
     
     // Labels
     @IBOutlet weak var titleLabel: UILabel!
-    
-    // MARK: - Variables
-    
+        
     // MARK: - Awake functions
     
     override func awakeFromNib() {
@@ -54,4 +52,4 @@ class LanguageTableViewCell: UITableViewCell {
  //     \{o o}/
  //      =\o/=
  //       ^ ^
- */
+*/
